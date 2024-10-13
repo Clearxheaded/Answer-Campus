@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VNEngine;
 
 
 public class SaveProgress : MonoBehaviour
@@ -21,6 +22,7 @@ public class SaveProgress : MonoBehaviour
 
     public void StartNewGame(GameObject newGamePanelOverride)
     {
+        
         if (PlayerPrefs.HasKey("Leilani"))
         {
             newGamePanelOverride.SetActive(true);
@@ -53,6 +55,7 @@ public class SaveProgress : MonoBehaviour
 
     public void Reset()
     {
+        StatsManager.Clear_All_Stats();
         PlayerPrefs.DeleteAll();
     }
 
