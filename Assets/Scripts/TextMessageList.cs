@@ -116,6 +116,24 @@ public class TextMessageList : MonoBehaviour
 
     private void GoToLocation(string location)
     {
+        /* REMOVE MESSAGES FROM CHARACTER */
+
+            // Find the character whose messages are being viewed
+            Character from = (Character)Enum.Parse(typeof(Character), inboxHeader.text);
+
+            // Remove the messages from the groupedMessages dictionary
+            if (groupedMessages.ContainsKey(from))
+            {
+                groupedMessages.Remove(from);
+                Debug.Log($"Removed all messages from {from}");
+
+                // Save the updated messages to PlayerPrefs
+                messages = groupedMessages.Values.SelectMany(m => m).ToList();
+                PlayerPrefsExtra.SetList("messages", messages);
+                PlayerPrefs.Save();
+            }
+
+
         Debug.Log("Going to " + location);
         SceneManager.LoadScene(location);
     }

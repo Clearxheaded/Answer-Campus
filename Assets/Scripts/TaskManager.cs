@@ -58,7 +58,7 @@ public class TaskManager : MonoBehaviour
                 // Check if the task is not completed
                 if (!StatsManager.Get_Boolean_Stat(taskID + "_Completed"))
                 {
-                    activeTasks.Add(taskID);
+                    activeTasks.Add(PrettyTaskTitle(taskID));
                 }
             }
         }
@@ -75,9 +75,19 @@ public class TaskManager : MonoBehaviour
             if (stat.Key.EndsWith("_Completed") && stat.Value)
             {
                 string taskID = stat.Key.Replace("_Completed", "");
-                completedTasks.Add(taskID);
+                completedTasks.Add(PrettyTaskTitle(taskID));
             }
         }
         return completedTasks;
+    }
+
+    // Helper method to format task titles
+    private string PrettyTaskTitle(string taskID)
+    {
+        // Remove any prefixes like "Task_" and replace underscores with spaces
+        string prettyTitle = taskID.Replace("Task_", "").Replace("_", " ");
+
+        // Capitalize the first letter of each word for readability
+        return System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(prettyTitle.ToLower());
     }
 }
