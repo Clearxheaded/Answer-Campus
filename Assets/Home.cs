@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Home : MonoBehaviour
 {
@@ -17,5 +18,10 @@ public class Home : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void Quit()
+    {
+        SceneManager.LoadScene("Main");
     }
 }
