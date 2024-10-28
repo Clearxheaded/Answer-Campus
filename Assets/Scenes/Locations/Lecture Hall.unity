@@ -3511,7 +3511,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: "sIf you ever want to talk more about lessons and literature, I\u2019ll buy
+  text: "If you ever want to talk more about lessons and literature, I\u2019ll buy
     you coffee. "
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
