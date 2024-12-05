@@ -26,7 +26,7 @@ namespace VNEngine
     {
         // DO NOT CHANGE: is the maximum number of choices. Dictated by the number of ChoiceButtons listed in the UIManager. You shouldn't ever need more than 20 buttons.
         public static int max_number_of_buttons = 6;
-
+        
         [HideInInspector]
         public string Name_Of_Choice;   // Text that appears at the top of the choices menu. Ex: I'm at a crossroads. Which way should I go?
         [HideInInspector]
@@ -52,7 +52,7 @@ namespace VNEngine
         [HideInInspector]
         public bool[] Choice_Been_Clicked_Before = new bool[max_number_of_buttons];
         [HideInInspector]
-        public Select_Default_Choice default_selection = Select_Default_Choice.None;
+        public Select_Default_Choice default_selection = Select_Default_Choice.Top_Choice;
 
 
 
@@ -91,10 +91,12 @@ namespace VNEngine
             //            Debug.Log(UIManager.ui_manager.choice_buttons.Length);
 
             //           default_button_flexible_height = UIManager.ui_manager.choice_buttons[0].GetComponent<LayoutElement>().preferredHeight;
-                   }
+            default_selection = Select_Default_Choice.Top_Choice;
+
+    }
 
 
-        public override void Run_Node()
+    public override void Run_Node()
         {
             StartCoroutine(Running());
         }
@@ -260,7 +262,7 @@ namespace VNEngine
             if (randomize_choices_order)
                 RandomizeButtonOrder();
 
-            
+//SET DEFAULT
             // Set which choice should be select by default
             if (default_selection == Select_Default_Choice.Top_Choice
                 || default_selection == Select_Default_Choice.Bottom_Choice)
@@ -289,6 +291,7 @@ namespace VNEngine
                     }
                 }
 
+
                 if (default_selection == Select_Default_Choice.Top_Choice 
                     && topmost_choice != null)
                     SelectChoice(topmost_choice.gameObject);
@@ -306,6 +309,7 @@ namespace VNEngine
         public void SelectChoice(GameObject choice)
         {
             EventSystem.current.SetSelectedGameObject(null);
+            Debug.Log("Setting Choice to " + choice.name);
             EventSystem.current.SetSelectedGameObject(choice);
         }
 

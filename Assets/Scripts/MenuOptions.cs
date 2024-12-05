@@ -8,7 +8,6 @@ public class MenuOptions : MonoBehaviour
 {
     public string sceneToLoad;
     public bool loadSceneOnStart = false;
-
     private void Start()
     {
         if(loadSceneOnStart)
