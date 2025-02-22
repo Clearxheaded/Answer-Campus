@@ -745,6 +745,7 @@ MonoBehaviour:
   movingCircle: {fileID: 853293024}
   targetZone: {fileID: 892066052}
   directionText: {fileID: 822920175}
+  cheer: {fileID: 892066055}
   speed: 200
   hitZoneRadius: 200
 --- !u!1 &1809642370
