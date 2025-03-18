@@ -20,6 +20,10 @@ public class Home : MonoBehaviour
         
     }
 
+    public void Study()
+    {
+        SceneManager.LoadScene("Study");
+    }
     public void Quit()
     {
         SceneManager.LoadScene("Main");

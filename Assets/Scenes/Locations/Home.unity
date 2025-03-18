@@ -545,7 +545,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &297715230
 GameObject:
@@ -669,7 +669,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &303978092
 MonoBehaviour:
@@ -1462,6 +1462,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -1485,7 +1486,7 @@ RectTransform:
   - {fileID: 687468700}
   - {fileID: 1241257048}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2215,7 +2216,7 @@ PrefabInstance:
       objectReference: {fileID: 283277974}
     - target: {fileID: 1315362149884628723, guid: fdf482949b3615f4393475feec474a12, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1315362149884628723, guid: fdf482949b3615f4393475feec474a12, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6299,7 +6300,6 @@ GameObject:
   - component: {fileID: 2088279930}
   - component: {fileID: 2088279929}
   - component: {fileID: 2088279928}
-  - component: {fileID: 2088279931}
   m_Layer: 5
   m_Name: Study Button
   m_TagString: Untagged
@@ -6371,9 +6371,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2088279931}
-        m_TargetAssemblyTypeName: Location, Assembly-CSharp
-        m_MethodName: GoToLocation
+      - m_Target: {fileID: 418399266}
+        m_TargetAssemblyTypeName: Home, Assembly-CSharp
+        m_MethodName: Study
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6381,7 +6381,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &2088279929
 MonoBehaviour:
@@ -6421,20 +6421,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2088279926}
   m_CullTransparentMesh: 1
---- !u!114 &2088279931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2088279926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79222de6e39b4b545ba96d5e44902518, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scene: Word_Game
-  timestamp: 
-  minutes: 0
-  played: 0
-  characterWaiting: {fileID: 0}

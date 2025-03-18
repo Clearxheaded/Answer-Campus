@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class FivePositionsGameManager : MonoBehaviour {
     [Header("Word List")]
@@ -50,6 +51,11 @@ public class FivePositionsGameManager : MonoBehaviour {
     private bool isTimerPaused = false;
 
     private void Start() {
+        StartGame();
+    }
+
+    public void StartGame()
+    {
         // Initialize score UI
         UpdateScoreUI();
 
@@ -58,7 +64,7 @@ public class FivePositionsGameManager : MonoBehaviour {
         if (gameOverPanel != null) gameOverPanel.SetActive(false);
         if (gameStuff != null) gameStuff.SetActive(true);
 
-        // Initialize the timer but don’t let it tick yet
+        // Initialize the timer but donï¿½t let it tick yet
         timeLeft = gameDuration;
         UpdateTimerUI();
         isTimerPaused = true;
@@ -68,8 +74,8 @@ public class FivePositionsGameManager : MonoBehaviour {
 
         // Start the first countdown
         StartCoroutine(CountdownCoroutine());
+        
     }
-
     /// <summary>
     /// Main game timer. It only decrements timeLeft if isTimerPaused is false.
     /// </summary>
@@ -94,7 +100,7 @@ public class FivePositionsGameManager : MonoBehaviour {
     /// Shows a short "3-2-1" countdown, then unpauses the timer and spawns letters.
     /// </summary>
     private IEnumerator CountdownCoroutine() {
-        // Start or reset the round’s target word
+        // Start or reset the roundï¿½s target word
         StartNewRound();
 
         if (countdownText != null) {
@@ -355,6 +361,12 @@ public class FivePositionsGameManager : MonoBehaviour {
         if (finalScoreText != null) {
             finalScoreText.text = score + " Words Studied";
         }
+    }
+
+    public void BackToHome()
+    {
+        //TODO: Adjust Player Stats
+        SceneManager.LoadScene("Home");
     }
 
     /// <summary>

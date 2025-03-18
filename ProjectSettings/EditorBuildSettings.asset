@@ -45,7 +45,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Commercial.unity
     guid: 6e15bd339009a2c44b50303019d615df
   - enabled: 1
-    path: Assets/MinigameAssets/Word_Game.unity
+    path: Assets/Scenes/Mini Games/Study.unity
     guid: 767841b43f7553d4eb217c0c0e751307
+  - enabled: 1
+    path: Assets/Scenes/Mini Games/Cheer.unity
+    guid: 1fa766f13e6978043949a09d4bfc1d22
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: dcc23ec7e2b63483393f2d3cdbef381f, type: 2}
