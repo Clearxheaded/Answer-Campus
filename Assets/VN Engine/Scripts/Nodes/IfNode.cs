@@ -93,6 +93,7 @@ namespace VNEngine
 
 
                     case Condition.Float_Stat_Requirement:
+                        Debug.Log($"FLOAT STAT REQ: {Stat_Name[x]} Stat is {Float_Stat_Is[x]} comparison to {Float_Compare_Value[x]}");
                         cur_condition = StatsManager.Compare_Float_Stat(Stat_Name[x], Float_Stat_Is[x], Float_Compare_Value[x]);
                         break;
 

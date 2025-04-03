@@ -119,6 +119,7 @@ namespace VNEngine
             bool result = false;
             // Check if it meets the requirements
             float stat = StatsManager.Get_Numbered_Stat(stat_name);
+            Debug.Log($"{stat_name} is {stat}.");
             switch (than)
             {
                 case Float_Stat_Comparator.Greater_than:
