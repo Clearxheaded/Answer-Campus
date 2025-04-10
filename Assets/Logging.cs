@@ -17,11 +17,21 @@ public class Logging : MonoBehaviour
 
     private void Awake()
     {
-        // Singleton setup
         if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+
+            // Read appId from steam_appid.txt
+            string appIdPath = Application.dataPath + "/../steam_appid.txt";
+            if (System.IO.File.Exists(appIdPath))
+            {
+                appId = System.IO.File.ReadAllText(appIdPath).Trim();
+            }
+            else
+            {
+                Debug.LogError("steam_appid.txt not found!");
+            }
         }
         else if (Instance != this)
         {
