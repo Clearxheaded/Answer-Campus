@@ -6,58 +6,58 @@ using UnityEngine.SceneManagement;
 
 public class Map : MonoBehaviour
 {
-    public Location[] locations;
-    public GameObject locationButtons;
+    public Location[] lockableLocations;
     private List<CharacterLocation> characterLocations;
     public Characters characters;
     // Start is called before the first frame update
-    void Start()
-        
-    {
-        //        System.DateTime.Now.ToShortTimeString()
-        //        timestamp = Time.time;
-        locations = GetComponentsInChildren<Location>();
-        characterLocations = PlayerPrefsExtra.GetList<CharacterLocation>("characterLocations", new List<CharacterLocation>());
-        for (int i = 0; i < locations.Length; i++)
-        {
-            if(SceneManager.GetActiveScene().name == locations[i].scene)
+    void Start() {
+            characterLocations = PlayerPrefsExtra.GetList<CharacterLocation>("characterLocations", new List<CharacterLocation>());
+            Location[] locations = GetComponentsInChildren<Location>();
+            for (int i = 0; i < lockableLocations.Length; i++)
             {
-                locations[i].GetComponent<Button>().enabled = false;
-            }
-
-            foreach (var characterLocation in characterLocations)
-            {
-                // Check if the character's location matches the active scene
-                if (characterLocation.location == locations[i].name)
+                foreach (var characterLocation in characterLocations)
                 {
-
-                    for (int j = 0; j < characters.profiles.Length; j++)
+                    // Check if the character's location matches the active scene
+                    if (characterLocation.location == lockableLocations[i].name)
                     {
-                        if (characters.profiles[j].character == characterLocation.character)
+                        for (int j = 0; j < characters.profiles.Length; j++)
                         {
-                            // Assign the profile picture to the location's UI
-                            locations[i].characterWaiting.sprite = characters.profiles[j].picture;
-                            locations[i].characterWaiting.gameObject.SetActive(true); // Show the profile picture
-//                            break; // Exit the loop once the correct profile is found
+                            if (characters.profiles[j].character == characterLocation.character)
+                            {
+                                // Assign the profile picture to the location's UI
+                                lockableLocations[i].GetComponent<Button>().interactable = true;
+                                lockableLocations[i].characterWaiting.sprite = characters.profiles[j].picture;
+                                lockableLocations[i].characterWaiting.gameObject.SetActive(true); // Show the profile picture
+                            }
+                            else
+                            {
+//                                lockableLocations[i].GetComponent<Button>().interactable = false;
+//                                lockableLocations[i].characterWaiting.gameObject.SetActive(false); // Show the profile picture
+                                
+                            }
                         }
                     }
-
                 }
-                else
+            }
+            foreach (var t in locations)
+            {
+                for (int j = 0; j < characterLocations.Count; j++)
                 {
- //                   locations[i].characterWaiting.gameObject.SetActive(false);
-
+                    if (t.scene == characterLocations[j].location)
+                    {
+                        for (int k = 0; k < characters.profiles.Length; k++)
+                        {
+                            if (characterLocations[j].character == characters.profiles[k].character)
+                            {
+                                t.characterWaiting.sprite = characters.profiles[k].picture;
+                                t.characterWaiting.gameObject.SetActive(true);
+                                break;
+                            }
+                        }
+                    }
                 }
             }
 
-
-        }
-
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

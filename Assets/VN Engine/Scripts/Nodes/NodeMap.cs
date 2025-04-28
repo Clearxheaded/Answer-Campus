@@ -17,14 +17,17 @@ namespace VNEngine
         {
 
             List<CharacterLocation> characterLocations = PlayerPrefsExtra.GetList<CharacterLocation>("characterLocations", new List<CharacterLocation>());
-            CharacterLocation characterLocation = new CharacterLocation();
-            characterLocation.character = character;
-            characterLocation.location = locationScene;
+            CharacterLocation characterLocation = new CharacterLocation
+            {
+                character = character,
+                location = locationScene
+            };
             if (!characterLocations.Contains(characterLocation))
             {
-                Debug.Log("Adding Character Pin to Map : " + character + " at " + locationScene);
+                Debug.Log("Attempting to add character pin to Map : " + character + " at " + locationScene);
                 if (addLocationToMap)
                 {
+                    Debug.Log($"{character} added to Map");
                     characterLocations.Add(characterLocation);
                 }
                 else
@@ -33,11 +36,13 @@ namespace VNEngine
                     {
                         if(locationScene == characterLocations[i].location && character == characterLocations[i].character)
                         {
+                            Debug.LogWarning($"{character} already added to map");
                             characterLocations.RemoveAt(i);
                             break;
                         }
                     }
                 }
+                Debug.Log($"Setting list of character locations");
                 PlayerPrefsExtra.SetList("characterLocations", characterLocations);
             }
             else
