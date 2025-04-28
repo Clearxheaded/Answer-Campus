@@ -76,7 +76,7 @@ namespace VNEngine
         // Edit this if you want the font to be changeable in different areas than just the dialogue text and speaker text
         public void SetDialogueFont(Font font)
         {
-            UIManager.ui_manager.speaker_panel.font = font;
+            UIManager.ui_manager.speaker_name_text.font = font;
             UIManager.ui_manager.text_panel.font = font;
         }
     }

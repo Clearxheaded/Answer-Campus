@@ -123,10 +123,16 @@ namespace VNEngine
             switch (than)
             {
                 case Float_Stat_Comparator.Greater_than:
+                    Debug.Log($"{stat_name} is {stat}. Greater!");
+
                     result = stat > value;
                     break;
                 case Float_Stat_Comparator.Less_than:
+                    Debug.Log($"{stat_name} is {stat}. Less!!");
                     result = stat < value;
+                    break;
+                default:
+                    Debug.LogError($"{stat_name} is {stat}. Not a valid comparator.");
                     break;
             }
             return result;

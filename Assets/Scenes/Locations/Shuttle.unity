@@ -186,6 +186,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Deepak
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1117390 stripped
@@ -240,7 +244,7 @@ MonoBehaviour:
   go_to_next_node: 1
   executed_from_load: 0
   slide_out: 0
-  fade_out: 0
+  fade_out: 1
   wait_for_actors_to_exit: 1
 --- !u!1001 &32976654
 PrefabInstance:
@@ -305,6 +309,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Leilani
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &32976655 stripped
@@ -361,9 +369,9 @@ MonoBehaviour:
   actor_name: Deepak
   actor_name_from: 0
   entrance_type: 1
-  fade_in_time: 1
+  fade_in_time: 0.1
   destination: 3
-  custom_position: {fileID: 0}
+  custom_position: {fileID: 1450658869}
 --- !u!1 &40002577
 GameObject:
   m_ObjectHideFlags: 0
@@ -1217,6 +1225,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Deepak
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &92923885 stripped
@@ -1606,6 +1618,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Leilani
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -2432,6 +2448,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Leilani
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &166436779 stripped
@@ -2982,6 +3002,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Deepak
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &226439158 stripped
@@ -3105,6 +3129,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Leilani
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -3817,6 +3845,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Leilani
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &320498980 stripped
@@ -3886,6 +3918,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Deepak
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -4205,6 +4241,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Leilani
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &379651185 stripped
@@ -4274,6 +4314,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Deepak
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -4507,6 +4551,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Leilani
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -4897,6 +4945,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Deepak
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -7330,6 +7382,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Leilani
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &451536957 stripped
@@ -7399,6 +7455,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Deepak
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -7470,6 +7530,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Deepak
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &463373483 stripped
@@ -7540,6 +7604,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Leilani
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &474863180 stripped
@@ -7609,6 +7677,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Leilani
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -7893,6 +7965,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Deepak
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &512774008 stripped
@@ -8089,6 +8165,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Deepak
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -8306,7 +8386,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 5508a7a01a7b14c42a9181b9ad9ad4e1, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1001 &548946417
@@ -8371,6 +8451,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Deepak
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -8441,6 +8525,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Deepak
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -12782,9 +12870,9 @@ MonoBehaviour:
   Button_Events:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1992486944}
         m_TargetAssemblyTypeName: VNEngine.ConversationManager, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: Start_Conversation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12875,6 +12963,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Deepak
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &664436766 stripped
@@ -12944,6 +13036,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Leilani
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -13175,6 +13271,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Deepak
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -13515,6 +13615,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Leilani
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &692016640 stripped
@@ -13651,6 +13755,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Deepak
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &724089201 stripped
@@ -13708,7 +13816,7 @@ MonoBehaviour:
   actor_name: Leilani
   slide_out: 0
   fade_out: 1
-  fade_out_time: 1
+  fade_out_time: 0.1
 --- !u!1001 &742252353
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13771,6 +13879,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Leilani
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -15901,7 +16013,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: a33ae161e1aae09499bd1de5412bf03f, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!224 &781009440 stripped
@@ -15976,6 +16088,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Leilani
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -16258,6 +16374,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Deepak
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &794907440 stripped
@@ -16380,6 +16500,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Leilani
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -16757,7 +16881,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: a33ae161e1aae09499bd1de5412bf03f, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &830092753
@@ -17303,6 +17427,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Leilani
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &844161668 stripped
@@ -17372,6 +17500,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Leilani
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -17644,7 +17776,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: cda8427221d0b054ea8e3e0e19804cdf, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &883216771
@@ -17944,6 +18076,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Deepak
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -18335,6 +18471,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Deepak
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &920413366 stripped
@@ -18725,6 +18865,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Leilani
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &923481469 stripped
@@ -18794,6 +18938,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Leilani
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -19259,6 +19407,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Leilani
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &961151482 stripped
@@ -19313,7 +19465,7 @@ MonoBehaviour:
   go_to_next_node: 1
   executed_from_load: 0
   slide_out: 0
-  fade_out: 0
+  fade_out: 1
   wait_for_actors_to_exit: 1
 --- !u!1001 &963764570
 PrefabInstance:
@@ -19377,6 +19529,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Leilani
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -19447,6 +19603,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Leilani
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -20232,6 +20392,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Deepak
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1026263688 stripped
@@ -20288,7 +20452,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 7f80153007d734b408103605110c1865, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &1045452409
@@ -20340,7 +20504,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: a7a948a6f69c9954aa7561743748c324, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &1055635334
@@ -20726,6 +20890,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Deepak
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1072056815 stripped
@@ -20865,6 +21033,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Deepak
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -21242,7 +21414,7 @@ MonoBehaviour:
   actor_name: Deepak
   actor_name_from: 0
   entrance_type: 1
-  fade_in_time: 1
+  fade_in_time: 0.1
   destination: 3
   custom_position: {fileID: 1260854418}
 --- !u!1 &1106709979
@@ -21629,6 +21801,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Deepak
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1117557819 stripped
@@ -21636,6 +21812,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1117557818}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1139225170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1139225171}
+  - component: {fileID: 1139225172}
+  m_Layer: 0
+  m_Name: Alter Stats
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1139225171
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139225170}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1992486943}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1139225172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139225170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b537df8b41db71745ae8383c66199796, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  print_all_stats_to_console: 0
+  stat_type: 0
+  stat_name: Deepak Encounter
+  set_number_to: 4
+  modify_number_amount: 0
+  set_bool_to: 0
+  set_string_to: 
 --- !u!1 &1153989643
 GameObject:
   m_ObjectHideFlags: 0
@@ -21911,6 +22140,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Leilani
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1168645221 stripped
@@ -21973,6 +22206,59 @@ MonoBehaviour:
   cur_node: 0
   active: 0
   finished_conversation: 0
+--- !u!1 &1179954856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1179954857}
+  - component: {fileID: 1179954858}
+  m_Layer: 0
+  m_Name: Alter Stats
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1179954857
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179954856}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1992486943}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1179954858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179954856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b537df8b41db71745ae8383c66199796, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  print_all_stats_to_console: 0
+  stat_type: 2
+  stat_name: Missing Cues
+  set_number_to: 0
+  modify_number_amount: 0
+  set_bool_to: 1
+  set_string_to: 
 --- !u!1 &1185855811
 GameObject:
   m_ObjectHideFlags: 0
@@ -22196,6 +22482,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Leilani
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1192040103 stripped
@@ -22314,6 +22604,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Leilani
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1196557481 stripped
@@ -22383,6 +22677,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Deepak
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -22723,6 +23021,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Leilani
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -23434,6 +23736,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Deepak
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -24239,6 +24545,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Leilani
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -26134,6 +26444,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Leilani
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -28458,7 +28772,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: a33ae161e1aae09499bd1de5412bf03f, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1001 &1298870662
@@ -28523,6 +28837,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Deepak
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -28740,7 +29058,7 @@ MonoBehaviour:
   actor_name: Leilani
   actor_name_from: 0
   entrance_type: 1
-  fade_in_time: 1
+  fade_in_time: 0.1
   destination: 3
   custom_position: {fileID: 781009440}
 --- !u!1 &1327006425
@@ -31256,6 +31574,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Deepak
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1367405956 stripped
@@ -31325,6 +31647,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Leilani
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -31717,6 +32043,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Deepak
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1391588077 stripped
@@ -32101,6 +32431,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Leilani
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1414437100 stripped
@@ -32378,6 +32712,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Deepak
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -32803,6 +33141,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 050186d06c7d3ba4ebfcd126475dd89e, type: 3}
+--- !u!224 &1450658869 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7509519032867895242, guid: 050186d06c7d3ba4ebfcd126475dd89e, type: 3}
+  m_PrefabInstance: {fileID: 1450658868}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1450755694
 GameObject:
   m_ObjectHideFlags: 0
@@ -33186,6 +33529,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Deepak
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1466214803 stripped
@@ -33330,6 +33677,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Deepak
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1484746087 stripped
@@ -33466,6 +33817,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Deepak
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1490437157 stripped
@@ -33522,7 +33877,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: cda8427221d0b054ea8e3e0e19804cdf, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &1517931031
@@ -33969,6 +34324,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Leilani
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -35307,7 +35666,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: a7a948a6f69c9954aa7561743748c324, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &1599224832
@@ -35359,7 +35718,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 222a42e60edf5f244baad63c9d246dc2, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &1610136860
@@ -35732,6 +36091,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Deepak
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -36284,6 +36647,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Leilani
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1692722877 stripped
@@ -36354,6 +36721,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Leilani
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1696748809 stripped
@@ -36410,7 +36781,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: 
   new_image: {fileID: 21300000, guid: e5f6deeda3b4e934dbf61fd9d1ced5aa, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &1702341061
@@ -36731,6 +37102,7 @@ Transform:
   - {fileID: 1737009774}
   - {fileID: 1175767760}
   - {fileID: 1933763025}
+  - {fileID: 1992486943}
   m_Father: {fileID: 561909551}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -37362,6 +37734,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Leilani
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1716131062 stripped
@@ -37647,6 +38023,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Leilani
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -38203,6 +38583,54 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
+--- !u!1 &1774741715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1774741716}
+  - component: {fileID: 1774741717}
+  m_Layer: 0
+  m_Name: Load Scene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1774741716
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774741715}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1992486943}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1774741717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774741715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a19d6f41c697fb74eb71f6d7db3e2f48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  level_to_load: Dining Hall
+  async_loading: 0
 --- !u!1 &1778102469
 GameObject:
   m_ObjectHideFlags: 0
@@ -38479,6 +38907,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Deepak
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1804758308 stripped
@@ -38535,7 +38967,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 7f80153007d734b408103605110c1865, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1001 &1822155676
@@ -38600,6 +39032,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Deepak
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -39630,6 +40066,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Leilani
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1856113037 stripped
@@ -39699,6 +40139,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Deepak
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -39770,6 +40214,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Deepak
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1863607326 stripped
@@ -39826,7 +40274,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 89a7ffa498c22ee4890eceff649913dc, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &1877950599
@@ -41806,6 +42254,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Deepak
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1895841300 stripped
@@ -42196,6 +42648,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Deepak
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1905055063 stripped
@@ -42252,7 +42708,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 7f80153007d734b408103605110c1865, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &1907845621
@@ -42478,6 +42934,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Leilani
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1911198527 stripped
@@ -42599,6 +43059,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Deepak
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1916362875 stripped
@@ -42655,7 +43119,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: cbcdfb4a2e874e24a8489b00a0153393, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &1933763024
@@ -42773,6 +43237,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Leilani
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -42959,6 +43427,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Deepak
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1971562563 stripped
@@ -43028,6 +43500,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Leilani
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -43422,6 +43898,58 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 055d54775d5803f47a39dc9b66c29a8f, type: 3}
+--- !u!1 &1992486942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1992486943}
+  - component: {fileID: 1992486944}
+  m_Layer: 0
+  m_Name: Get Food
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1992486943
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992486942}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1139225171}
+  - {fileID: 1179954857}
+  - {fileID: 1774741716}
+  m_Father: {fileID: 1702757808}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1992486944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992486942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7598fdb9cbb025c4293438a58006c68f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroy_when_finished: 0
+  start_conversation_when_done: {fileID: 0}
+  cur_node: 0
+  active: 0
+  finished_conversation: 0
 --- !u!1001 &2000798142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43484,6 +44012,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Deepak
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -43624,6 +44156,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Leilani
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -43799,6 +44335,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Leilani
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -44190,6 +44730,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Deepak
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &2070763244 stripped
@@ -44259,6 +44803,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Deepak
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -44476,7 +45024,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: cda8427221d0b054ea8e3e0e19804cdf, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1001 &2116570200
@@ -44541,6 +45089,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Leilani
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -44611,6 +45163,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Leilani
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -44732,6 +45288,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Leilani
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &2130394121 stripped
@@ -44801,6 +45361,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Deepak
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}

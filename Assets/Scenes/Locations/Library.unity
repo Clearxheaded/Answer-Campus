@@ -333,7 +333,7 @@ MonoBehaviour:
   actor_name: Beau
   slide_out: 0
   fade_out: 1
-  fade_out_time: 1
+  fade_out_time: 0.1
 --- !u!1 &1289140
 GameObject:
   m_ObjectHideFlags: 0
@@ -12423,7 +12423,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 4d9217bd3d9691e4b866fd1082aed8fd, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &178533258
@@ -15566,7 +15566,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 5a766990e52958a42b4c296e052e04ad, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1001 &209025357
@@ -19283,7 +19283,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: d8f7cad2017b7834dac7c79b9a2486db, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &255565838
@@ -21152,6 +21152,10 @@ PrefabInstance:
     - target: {fileID: 11471904, guid: 9980a9ae44b2f02419cb43085699fa49, type: 3}
       propertyPath: actor_name
       value: Beau
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471904, guid: 9980a9ae44b2f02419cb43085699fa49, type: 3}
+      propertyPath: fade_out_time
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9980a9ae44b2f02419cb43085699fa49, type: 3}
@@ -26568,7 +26572,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 7f80153007d734b408103605110c1865, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &360273865
@@ -27785,7 +27789,7 @@ MonoBehaviour:
   actor_name: Breanna
   slide_out: 0
   fade_out: 1
-  fade_out_time: 1
+  fade_out_time: 0.1
 --- !u!1 &389029199
 GameObject:
   m_ObjectHideFlags: 0
@@ -28947,7 +28951,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 222a42e60edf5f244baad63c9d246dc2, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &411576036
@@ -29542,6 +29546,10 @@ PrefabInstance:
     - target: {fileID: 11471904, guid: 9980a9ae44b2f02419cb43085699fa49, type: 3}
       propertyPath: actor_name
       value: Charli
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471904, guid: 9980a9ae44b2f02419cb43085699fa49, type: 3}
+      propertyPath: fade_out_time
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9980a9ae44b2f02419cb43085699fa49, type: 3}
@@ -30653,7 +30661,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroy_when_finished: 0
-  start_conversation_when_done: {fileID: 0}
+  start_conversation_when_done: {fileID: 1801678546}
   cur_node: 0
   active: 0
   finished_conversation: 0
@@ -47206,8 +47214,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Ji-ah
   slide_out: 0
-  fade_out: 0
-  fade_out_time: 1
+  fade_out: 1
+  fade_out_time: 0.1
 --- !u!1 &533250461
 GameObject:
   m_ObjectHideFlags: 0
@@ -48974,7 +48982,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: e5f6deeda3b4e934dbf61fd9d1ced5aa, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &573344946
@@ -52587,7 +52595,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: cda8427221d0b054ea8e3e0e19804cdf, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &647799112
@@ -52864,7 +52872,7 @@ MonoBehaviour:
   entrance_type: 1
   fade_in_time: 1
   destination: 3
-  custom_position: {fileID: 0}
+  custom_position: {fileID: 1450658869}
 --- !u!1 &650843440
 GameObject:
   m_ObjectHideFlags: 0
@@ -53245,8 +53253,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   slide_out: 0
-  fade_out: 0
-  fade_out_time: 1
+  fade_out: 1
+  fade_out_time: 0.1
 --- !u!1 &665949264
 GameObject:
   m_ObjectHideFlags: 0
@@ -55079,6 +55087,10 @@ PrefabInstance:
     - target: {fileID: 11471904, guid: 9980a9ae44b2f02419cb43085699fa49, type: 3}
       propertyPath: actor_name
       value: Beau
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471904, guid: 9980a9ae44b2f02419cb43085699fa49, type: 3}
+      propertyPath: fade_out_time
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9980a9ae44b2f02419cb43085699fa49, type: 3}
@@ -60010,7 +60022,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 676b6ff9587c4d14a9f465a7d6127ca2, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &780083604
@@ -65730,7 +65742,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 58ac954cdc5107349b72ba462ee15912, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &896092098
@@ -66345,7 +66357,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: cda8427221d0b054ea8e3e0e19804cdf, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1001 &902269943
@@ -80122,7 +80134,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 676b6ff9587c4d14a9f465a7d6127ca2, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &1014971963
@@ -80386,7 +80398,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: e5f6deeda3b4e934dbf61fd9d1ced5aa, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &1018565663
@@ -91993,7 +92005,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   go_to_next_node: 1
   executed_from_load: 0
-  print_all_stats_to_console: 0
+  print_all_stats_to_console: 1
   stat_type: 0
   stat_name: Deepak Encounter
   set_number_to: 2
@@ -93030,7 +93042,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 5508a7a01a7b14c42a9181b9ad9ad4e1, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1001 &1214104639
@@ -95148,7 +95160,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 7f80153007d734b408103605110c1865, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &1253263859
@@ -98122,7 +98134,7 @@ MonoBehaviour:
   actor_name: Breanna
   slide_out: 0
   fade_out: 1
-  fade_out_time: 1
+  fade_out_time: 0.1
 --- !u!1 &1302354752
 GameObject:
   m_ObjectHideFlags: 0
@@ -100446,7 +100458,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 89a7ffa498c22ee4890eceff649913dc, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &1314268184
@@ -105227,9 +105239,9 @@ MonoBehaviour:
   go_to_next_node: 1
   executed_from_load: 0
   actor_name_from: 0
-  actor_name: 
+  actor_name: Deepak
   new_image: {fileID: 21300000, guid: 5508a7a01a7b14c42a9181b9ad9ad4e1, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &1385831429
@@ -110110,7 +110122,7 @@ MonoBehaviour:
   actor_name: Beau
   slide_out: 0
   fade_out: 1
-  fade_out_time: 1
+  fade_out_time: 0.1
 --- !u!1 &1463728643
 GameObject:
   m_ObjectHideFlags: 0
@@ -113912,8 +113924,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Ji-ah
   slide_out: 0
-  fade_out: 0
-  fade_out_time: 1
+  fade_out: 1
+  fade_out_time: 0.1
 --- !u!1001 &1524268569
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -133661,7 +133673,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 073b7bb116f678a4e91e391971551ac8, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &1759069026
@@ -135603,7 +135615,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: cda8427221d0b054ea8e3e0e19804cdf, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &1791015055
@@ -137917,7 +137929,7 @@ GameObject:
   - component: {fileID: 1801678545}
   - component: {fileID: 1801678546}
   m_Layer: 0
-  m_Name: End Deepak Encounter
+  m_Name: End Deepak - Success
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -140414,7 +140426,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 073b7bb116f678a4e91e391971551ac8, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &1839756199
@@ -143671,7 +143683,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 7f80153007d734b408103605110c1865, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &1865197633
@@ -144929,7 +144941,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 5a766990e52958a42b4c296e052e04ad, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &1889300082
@@ -150706,7 +150718,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 5508a7a01a7b14c42a9181b9ad9ad4e1, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &2000600042
@@ -153310,7 +153322,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: cbcdfb4a2e874e24a8489b00a0153393, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &2040512395
@@ -155510,7 +155522,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 0dd79202585ff9345a7f479bf30a3ee9, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &2060809389
@@ -156650,6 +156662,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Charli
       objectReference: {fileID: 0}
+    - target: {fileID: 11471904, guid: 9980a9ae44b2f02419cb43085699fa49, type: 3}
+      propertyPath: fade_out_time
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9980a9ae44b2f02419cb43085699fa49, type: 3}
 --- !u!4 &2078250118 stripped
@@ -157252,8 +157268,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Ji-ah
   slide_out: 0
-  fade_out: 0
-  fade_out_time: 1
+  fade_out: 1
+  fade_out_time: 0.1
 --- !u!1001 &2092116254
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -157373,7 +157389,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 676b6ff9587c4d14a9f465a7d6127ca2, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &2093533380

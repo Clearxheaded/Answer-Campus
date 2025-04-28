@@ -56,6 +56,8 @@ namespace VNEngine
 
             // Get localized text and sub in Stats values
             GetLocalizedText(false);
+            UIManager.ui_manager.MoveSpeakerPanelToActor(actual_actor);
+            UIManager.ui_manager.AnimateDialogueTextPanel();
 
             StartCoroutine(Animate_Text(text));
 
@@ -133,7 +135,7 @@ namespace VNEngine
 
             if (clear_text_after)
             {
-                UIManager.ui_manager.speaker_panel.text = "";
+                UIManager.ui_manager.speaker_name_text.text = "";
                 UIManager.ui_manager.text_panel.text = "";
             }
 
@@ -313,7 +315,7 @@ namespace VNEngine
                 //     }
                 // }
 
-                UIManager.ui_manager.speaker_panel.text = speaker_title;
+                UIManager.ui_manager.speaker_name_text.text = speaker_title;
             }
 
 

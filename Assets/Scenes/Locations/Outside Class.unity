@@ -544,7 +544,7 @@ MonoBehaviour:
   actor_name: Eric
   actor_name_from: 0
   entrance_type: 1
-  fade_in_time: 1
+  fade_in_time: 0.1
   destination: 3
   custom_position: {fileID: 1450658869}
 --- !u!1 &54861065
@@ -4368,7 +4368,7 @@ MonoBehaviour:
   actor_name: Leilani
   actor_name_from: 0
   entrance_type: 1
-  fade_in_time: 1
+  fade_in_time: 0.1
   destination: 3
   custom_position: {fileID: 7509519031959263436}
 --- !u!1 &1232971406
@@ -5795,6 +5795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   go_to_next_node: 1
   executed_from_load: 0
+  randomizedOrder: 
   Name_Of_Choice: 
   Number_Of_Choices: 2
   Hide_Dialogue_UI: 1
@@ -7007,6 +7008,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   go_to_next_node: 1
   executed_from_load: 0
+  randomizedOrder: 
   Name_Of_Choice: 
   Number_Of_Choices: 2
   Hide_Dialogue_UI: 1
@@ -7275,6 +7277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   go_to_next_node: 1
   executed_from_load: 0
+  randomizedOrder: 
   Name_Of_Choice: 
   Number_Of_Choices: 2
   Hide_Dialogue_UI: 1
@@ -7543,6 +7546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   go_to_next_node: 1
   executed_from_load: 0
+  randomizedOrder: 
   Name_Of_Choice: 
   Number_Of_Choices: 2
   Hide_Dialogue_UI: 1

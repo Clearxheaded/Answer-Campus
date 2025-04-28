@@ -6652,7 +6652,7 @@ MonoBehaviour:
   actor_name: Professor Blanche
   actor_name_from: 0
   entrance_type: 1
-  fade_in_time: 1
+  fade_in_time: 0.1
   destination: 3
   custom_position: {fileID: 4909160718463724324}
 --- !u!1 &78248881
@@ -10591,7 +10591,7 @@ MonoBehaviour:
   actor_name: Leilani
   slide_out: 0
   fade_out: 1
-  fade_out_time: 1
+  fade_out_time: 0.1
 --- !u!1 &146991499
 GameObject:
   m_ObjectHideFlags: 0
@@ -13990,7 +13990,7 @@ MonoBehaviour:
   actor_name: Professor Blanche
   actor_name_from: 0
   entrance_type: 1
-  fade_in_time: 1
+  fade_in_time: 0.1
   destination: 3
   custom_position: {fileID: 7509519031959263436}
 --- !u!1 &246735365
@@ -18939,7 +18939,7 @@ MonoBehaviour:
   actor_name: Leilani
   slide_out: 0
   fade_out: 1
-  fade_out_time: 1
+  fade_out_time: 0.1
 --- !u!1 &416265294
 GameObject:
   m_ObjectHideFlags: 0
@@ -19631,7 +19631,7 @@ MonoBehaviour:
   actor_name: Professor Blanche
   slide_out: 0
   fade_out: 1
-  fade_out_time: 1
+  fade_out_time: 0.1
 --- !u!1 &461392785
 GameObject:
   m_ObjectHideFlags: 0
@@ -20818,7 +20818,7 @@ MonoBehaviour:
   actor_name: Leilani
   actor_name_from: 0
   entrance_type: 1
-  fade_in_time: 1
+  fade_in_time: 0.1
   destination: 3
   custom_position: {fileID: 7509519031959263436}
 --- !u!1 &493164194
@@ -21525,7 +21525,7 @@ MonoBehaviour:
   actor_name: Leilani
   actor_name_from: 0
   entrance_type: 1
-  fade_in_time: 1
+  fade_in_time: 0.1
   destination: 3
   custom_position: {fileID: 7509519031959263436}
 --- !u!1 &535190890
@@ -28531,7 +28531,7 @@ MonoBehaviour:
   go_to_next_node: 1
   executed_from_load: 0
   slide_out: 0
-  fade_out: 0
+  fade_out: 1
   wait_for_actors_to_exit: 1
 --- !u!1 &657330332
 GameObject:
@@ -29179,8 +29179,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   slide_out: 0
-  fade_out: 0
-  fade_out_time: 1
+  fade_out: 1
+  fade_out_time: 0.1
 --- !u!1 &679551995
 GameObject:
   m_ObjectHideFlags: 0
@@ -29443,7 +29443,7 @@ MonoBehaviour:
   actor_name: Leilani
   actor_name_from: 0
   entrance_type: 1
-  fade_in_time: 1
+  fade_in_time: 0.1
   destination: 3
   custom_position: {fileID: 7509519031959263436}
 --- !u!1 &691139701
@@ -31790,7 +31790,7 @@ MonoBehaviour:
   actor_name: Professor Blanche
   slide_out: 0
   fade_out: 1
-  fade_out_time: 1
+  fade_out_time: 0.1
 --- !u!1 &758927209
 GameObject:
   m_ObjectHideFlags: 0
@@ -31892,7 +31892,7 @@ MonoBehaviour:
   actor_name: Professor Blanche
   actor_name_from: 0
   entrance_type: 1
-  fade_in_time: 1
+  fade_in_time: 0.1
   destination: 3
   custom_position: {fileID: 4909160718463724324}
 --- !u!1 &762849188
@@ -36296,7 +36296,7 @@ MonoBehaviour:
   actor_name: Leilani
   actor_name_from: 0
   entrance_type: 1
-  fade_in_time: 1
+  fade_in_time: 0.1
   destination: 3
   custom_position: {fileID: 7509519031959263436}
 --- !u!1 &947504566
@@ -36670,7 +36670,7 @@ MonoBehaviour:
   actor_name: Professor Blanche
   slide_out: 0
   fade_out: 1
-  fade_out_time: 1
+  fade_out_time: 0.1
 --- !u!1 &951194223
 GameObject:
   m_ObjectHideFlags: 0
@@ -36822,7 +36822,7 @@ MonoBehaviour:
   actor_name: Leilani
   actor_name_from: 0
   entrance_type: 1
-  fade_in_time: 1
+  fade_in_time: 0.1
   destination: 3
   custom_position: {fileID: 7509519031959263436}
 --- !u!1 &957303378
@@ -37473,7 +37473,7 @@ MonoBehaviour:
   actor_name: Professor Blanche
   actor_name_from: 0
   entrance_type: 1
-  fade_in_time: 1
+  fade_in_time: 0.1
   destination: 3
   custom_position: {fileID: 4909160718463724324}
 --- !u!1 &970442037
@@ -37950,7 +37950,7 @@ MonoBehaviour:
   actor_name: Professor Blanche
   actor_name_from: 0
   entrance_type: 1
-  fade_in_time: 1
+  fade_in_time: 0.1
   destination: 3
   custom_position: {fileID: 4909160718463724324}
 --- !u!1 &993564035
@@ -39667,7 +39667,7 @@ MonoBehaviour:
   actor_name: Leilani
   actor_name_from: 0
   entrance_type: 1
-  fade_in_time: 1
+  fade_in_time: 0.1
   destination: 3
   custom_position: {fileID: 7509519031959263436}
 --- !u!1 &1045496786
@@ -40789,7 +40789,7 @@ MonoBehaviour:
   actor_name: Professor Blanche
   actor_name_from: 0
   entrance_type: 1
-  fade_in_time: 1
+  fade_in_time: 0.1
   destination: 3
   custom_position: {fileID: 4909160718463724324}
 --- !u!1 &1109412417
@@ -41107,7 +41107,7 @@ MonoBehaviour:
   actor_name: Leilani
   slide_out: 0
   fade_out: 1
-  fade_out_time: 1
+  fade_out_time: 0.1
 --- !u!1 &1129132622
 GameObject:
   m_ObjectHideFlags: 0
@@ -46090,7 +46090,7 @@ MonoBehaviour:
   actor_name: Matthew
   actor_name_from: 0
   entrance_type: 1
-  fade_in_time: 1
+  fade_in_time: 0.1
   destination: 3
   custom_position: {fileID: 0}
 --- !u!1 &1255103674
@@ -47273,7 +47273,7 @@ MonoBehaviour:
   actor_name: Professor Blanche
   actor_name_from: 0
   entrance_type: 1
-  fade_in_time: 1
+  fade_in_time: 0.1
   destination: 3
   custom_position: {fileID: 4909160718463724324}
 --- !u!1 &1297105012
@@ -47902,7 +47902,7 @@ MonoBehaviour:
   actor_name: Professor Blanche
   slide_out: 0
   fade_out: 1
-  fade_out_time: 1
+  fade_out_time: 0.1
 --- !u!1 &1354633845
 GameObject:
   m_ObjectHideFlags: 0
@@ -48218,7 +48218,7 @@ MonoBehaviour:
   actor_name: Professor Blanche
   actor_name_from: 0
   entrance_type: 1
-  fade_in_time: 1
+  fade_in_time: 0.1
   destination: 3
   custom_position: {fileID: 4909160718463724324}
 --- !u!1 &1378834880
@@ -52617,7 +52617,7 @@ MonoBehaviour:
   actor_name: Professor Blanche
   actor_name_from: 0
   entrance_type: 1
-  fade_in_time: 1
+  fade_in_time: 0.1
   destination: 3
   custom_position: {fileID: 4909160718463724324}
 --- !u!1 &1463693382
@@ -53900,7 +53900,7 @@ MonoBehaviour:
   actor_name: Leilani
   actor_name_from: 0
   entrance_type: 1
-  fade_in_time: 1
+  fade_in_time: 0.1
   destination: 3
   custom_position: {fileID: 7509519031959263436}
 --- !u!1 &1555036654
@@ -54166,7 +54166,7 @@ MonoBehaviour:
   actor_name: Leilani
   actor_name_from: 0
   entrance_type: 1
-  fade_in_time: 1
+  fade_in_time: 0.1
   destination: 3
   custom_position: {fileID: 7509519031959263436}
 --- !u!1 &1593118576
@@ -56722,7 +56722,7 @@ MonoBehaviour:
   actor_name: Leilani
   actor_name_from: 0
   entrance_type: 1
-  fade_in_time: 1
+  fade_in_time: 0.1
   destination: 3
   custom_position: {fileID: 7509519031959263436}
 --- !u!1 &1678616501
@@ -56984,7 +56984,7 @@ MonoBehaviour:
   go_to_next_node: 1
   executed_from_load: 0
   slide_out: 0
-  fade_out: 0
+  fade_out: 1
   wait_for_actors_to_exit: 1
 --- !u!1 &1685292402 stripped
 GameObject:
@@ -57317,7 +57317,7 @@ MonoBehaviour:
   actor_name: Leilani
   actor_name_from: 0
   entrance_type: 1
-  fade_in_time: 1
+  fade_in_time: 0.1
   destination: 3
   custom_position: {fileID: 7509519031959263436}
 --- !u!1 &1698236180
@@ -57800,7 +57800,7 @@ MonoBehaviour:
   actor_name: Professor Blanche
   slide_out: 0
   fade_out: 1
-  fade_out_time: 1
+  fade_out_time: 0.1
 --- !u!1 &1731532872
 GameObject:
   m_ObjectHideFlags: 0
@@ -60091,7 +60091,7 @@ MonoBehaviour:
   actor_name: Leilani
   slide_out: 0
   fade_out: 1
-  fade_out_time: 1
+  fade_out_time: 0.1
 --- !u!1 &1799861667
 GameObject:
   m_ObjectHideFlags: 0
@@ -61207,7 +61207,7 @@ MonoBehaviour:
   actor_name: Professor Blanche
   slide_out: 0
   fade_out: 1
-  fade_out_time: 1
+  fade_out_time: 0.1
 --- !u!1 &1839116199
 GameObject:
   m_ObjectHideFlags: 0
@@ -69091,7 +69091,7 @@ MonoBehaviour:
   actor_name: Leilani
   actor_name_from: 0
   entrance_type: 1
-  fade_in_time: 1
+  fade_in_time: 0.1
   destination: 3
   custom_position: {fileID: 7509519031959263436}
 --- !u!1 &2077086256

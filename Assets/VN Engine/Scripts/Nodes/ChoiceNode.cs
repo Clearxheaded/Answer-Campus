@@ -306,6 +306,24 @@ namespace VNEngine
             {
                 GetComponent<TimedChoiceNode>().Run_Node();
             }
+            // Gather active buttons
+            List<Button> activeButtons = new List<Button>();
+            foreach (Button b in UIManager.ui_manager.choice_buttons)
+            {
+                if (b.gameObject.activeInHierarchy)
+                {
+                    activeButtons.Add(b);
+                }
+            }
+
+// Animate them
+            UIManager.ui_manager.AnimateChoiceButtons(activeButtons);
+            if (activeButtons.Count > 0)
+            {
+                EventSystem.current.SetSelectedGameObject(null);
+                EventSystem.current.SetSelectedGameObject(activeButtons[0].gameObject);
+            }
+
         }
 
 

@@ -1032,6 +1032,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Beau
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &33442004 stripped
@@ -1639,7 +1643,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: a7a948a6f69c9954aa7561743748c324, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &48782752
@@ -10217,7 +10221,7 @@ Transform:
   - {fileID: 1222436054}
   - {fileID: 836736963}
   m_Father: {fileID: 321163484}
-  m_RootOrder: 26
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &144434559
 MonoBehaviour:
@@ -10482,7 +10486,7 @@ Transform:
   - {fileID: 837840072}
   - {fileID: 1297063612}
   m_Father: {fileID: 321163484}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &148111197
 MonoBehaviour:
@@ -12180,7 +12184,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 1c9a1eafce6eb8747b2bfa23d4eb6aa9, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1001 &180057781
@@ -12570,6 +12574,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Beau
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -12994,7 +13002,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1999343970}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &194182665
 MonoBehaviour:
@@ -13409,7 +13417,7 @@ Transform:
   - {fileID: 942773694}
   - {fileID: 1783552725}
   m_Father: {fileID: 321163484}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &201177646
 GameObject:
@@ -15506,7 +15514,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1999343970}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &244116677
 AudioSource:
@@ -16633,7 +16641,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 0dd79202585ff9345a7f479bf30a3ee9, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &258788845
@@ -16803,6 +16811,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Charli
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &260268170 stripped
@@ -16924,6 +16936,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Beau
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -17272,6 +17288,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Charli
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -17659,6 +17679,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Beau
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &286690249 stripped
@@ -17796,7 +17820,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 321163484}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &294821680
 MonoBehaviour:
@@ -18912,7 +18936,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 939008662}
-  - {fileID: 477620332}
   - {fileID: 2004185305}
   - {fileID: 294821679}
   - {fileID: 1507828990}
@@ -19205,7 +19228,7 @@ Transform:
   - {fileID: 2108060890}
   - {fileID: 970457789}
   m_Father: {fileID: 321163484}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &330057486
 MonoBehaviour:
@@ -20599,7 +20622,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: cbcdfb4a2e874e24a8489b00a0153393, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &354733452
@@ -22844,7 +22867,7 @@ Transform:
   - {fileID: 59292843}
   - {fileID: 1409957836}
   m_Father: {fileID: 321163484}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &369119736
 MonoBehaviour:
@@ -24372,7 +24395,7 @@ Transform:
   - {fileID: 268491447}
   - {fileID: 1058191600}
   m_Father: {fileID: 321163484}
-  m_RootOrder: 31
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &397666376
 MonoBehaviour:
@@ -25659,7 +25682,7 @@ Transform:
   - {fileID: 154594435}
   - {fileID: 1809734611}
   m_Father: {fileID: 321163484}
-  m_RootOrder: 30
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &464390252
 MonoBehaviour:
@@ -26395,6 +26418,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Beau
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &470839189 stripped
@@ -26633,56 +26660,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 476356032}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &477620331
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 477620332}
-  - component: {fileID: 477620333}
-  m_Layer: 0
-  m_Name: Set Background
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &477620332
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 477620331}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 472.5, y: 265.78125, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 321163484}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &477620333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 477620331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5176883eab49b6d4e9279aae31e3ee3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_to_next_node: 1
-  executed_from_load: 0
-  sprite: {fileID: 21300000, guid: b7950e61dfc582b4ea6517a2cdb71583, type: 3}
-  set_foreground: 0
-  fade_out: 0
-  fade_in: 0
 --- !u!1 &479950158
 GameObject:
   m_ObjectHideFlags: 0
@@ -27851,7 +27828,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 5508a7a01a7b14c42a9181b9ad9ad4e1, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &509640730
@@ -27968,6 +27945,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Charli
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -28199,6 +28180,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Beau
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &518978894 stripped
@@ -28268,6 +28253,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Beau
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -29401,6 +29390,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Beau
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &541354325 stripped
@@ -29682,6 +29675,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Beau
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -30168,7 +30165,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: a7a948a6f69c9954aa7561743748c324, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &552146081
@@ -30958,6 +30955,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Charli
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &575295857 stripped
@@ -31463,7 +31464,7 @@ Transform:
   m_Children:
   - {fileID: 255220065}
   m_Father: {fileID: 321163484}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &589550973
 MonoBehaviour:
@@ -32400,6 +32401,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Beau
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &602479186 stripped
@@ -32438,7 +32443,7 @@ Transform:
   m_Children:
   - {fileID: 1565564511}
   m_Father: {fileID: 321163484}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &603424177
 MonoBehaviour:
@@ -32892,6 +32897,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Charli
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -33466,7 +33475,7 @@ Transform:
   - {fileID: 1351993731}
   - {fileID: 841566287}
   m_Father: {fileID: 321163484}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &625203586
 MonoBehaviour:
@@ -33812,6 +33821,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Beau
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &628762252 stripped
@@ -34094,6 +34107,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Beau
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &636673457 stripped
@@ -34183,7 +34200,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1999343970}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &638783169
 MonoBehaviour:
@@ -35146,7 +35163,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1999343970}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &655782143
 AudioSource:
@@ -35305,7 +35322,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1446772418}
-  - {fileID: 1631447758}
   - {fileID: 2123500595}
   - {fileID: 1987018481}
   - {fileID: 1927713107}
@@ -43746,6 +43762,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Charli
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &794591598 stripped
@@ -44314,7 +44334,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 5a766990e52958a42b4c296e052e04ad, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &817896389
@@ -44488,7 +44508,7 @@ Transform:
   - {fileID: 1526077479}
   - {fileID: 1407184090}
   m_Father: {fileID: 321163484}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &819224565
 PrefabInstance:
@@ -44590,7 +44610,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1999343970}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &819231378
 MonoBehaviour:
@@ -46748,6 +46768,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Beau
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -48975,6 +48999,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Charli
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &851454415 stripped
@@ -49083,7 +49111,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: cda8427221d0b054ea8e3e0e19804cdf, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &855514462
@@ -52038,7 +52066,7 @@ Transform:
   - {fileID: 1779865331}
   - {fileID: 1855358439}
   m_Father: {fileID: 321163484}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &875658152
 MonoBehaviour:
@@ -52119,6 +52147,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Beau
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -52413,6 +52445,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Charli
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -54250,6 +54286,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Charli
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -57516,6 +57556,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Beau
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &933925310 stripped
@@ -57586,6 +57630,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Beau
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &936772627 stripped
@@ -57593,56 +57641,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 936772626}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &936824706
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 936824707}
-  - component: {fileID: 936824708}
-  m_Layer: 0
-  m_Name: Set Background
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &936824707
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 936824706}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1999343970}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &936824708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 936824706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5176883eab49b6d4e9279aae31e3ee3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_to_next_node: 1
-  executed_from_load: 0
-  sprite: {fileID: 21300000, guid: b7950e61dfc582b4ea6517a2cdb71583, type: 3}
-  set_foreground: 0
-  fade_out: 0
-  fade_in: 0
 --- !u!1 &937480160
 GameObject:
   m_ObjectHideFlags: 0
@@ -57692,7 +57690,7 @@ Transform:
   - {fileID: 336897522}
   - {fileID: 2098111969}
   m_Father: {fileID: 321163484}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &938554209
 GameObject:
@@ -60844,6 +60842,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Charli
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &961092892 stripped
@@ -61530,7 +61532,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: a7a948a6f69c9954aa7561743748c324, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &971046250
@@ -62847,7 +62849,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1999343970}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &980270782
 MonoBehaviour:
@@ -63990,7 +63992,7 @@ Transform:
   - {fileID: 200412355}
   - {fileID: 151806144}
   m_Father: {fileID: 321163484}
-  m_RootOrder: 29
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1002005708
 MonoBehaviour:
@@ -65815,7 +65817,7 @@ Transform:
   - {fileID: 424808027}
   - {fileID: 2114287131}
   m_Father: {fileID: 321163484}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1037541619
 MonoBehaviour:
@@ -68878,7 +68880,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: cda8427221d0b054ea8e3e0e19804cdf, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &1058191599
@@ -71008,6 +71010,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Beau
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1095003563 stripped
@@ -71367,7 +71373,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 655858618}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1102653848
 MonoBehaviour:
@@ -73327,6 +73333,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Beau
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1107531253 stripped
@@ -74313,7 +74323,7 @@ Transform:
   - {fileID: 1440367523}
   - {fileID: 334610587}
   m_Father: {fileID: 321163484}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1140378416
 MonoBehaviour:
@@ -74965,7 +74975,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 655858618}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1157327206
 AudioSource:
@@ -75467,7 +75477,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 1c9a1eafce6eb8747b2bfa23d4eb6aa9, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &1173147494
@@ -75798,7 +75808,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: a7a948a6f69c9954aa7561743748c324, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &1181013640
@@ -77102,7 +77112,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: cda8427221d0b054ea8e3e0e19804cdf, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &1208543784
@@ -77649,6 +77659,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Charli
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1211593205 stripped
@@ -77770,6 +77784,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Charli
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -78180,7 +78198,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 321163484}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1217691572
 MonoBehaviour:
@@ -79748,6 +79766,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Beau
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -82966,6 +82988,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Beau
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1255974375 stripped
@@ -83035,6 +83061,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Charli
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -83387,6 +83417,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Charli
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -84497,7 +84531,7 @@ Transform:
   m_Children:
   - {fileID: 1314914623}
   m_Father: {fileID: 321163484}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1281641387
 MonoBehaviour:
@@ -85270,6 +85304,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Beau
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1295729677 stripped
@@ -85616,7 +85654,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1999343970}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1304836527
 MonoBehaviour:
@@ -85635,9 +85673,9 @@ MonoBehaviour:
   actor_name: Breanna
   actor_name_from: 0
   entrance_type: 1
-  fade_in_time: 1
+  fade_in_time: 0.1
   destination: 3
-  custom_position: {fileID: 0}
+  custom_position: {fileID: 7509519031959263436}
 --- !u!1 &1308064411
 GameObject:
   m_ObjectHideFlags: 0
@@ -87102,7 +87140,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1999343970}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1319145158
 MonoBehaviour:
@@ -88445,7 +88483,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 7e464405efd56364b8222ffeee85b04b, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &1340092027
@@ -90465,6 +90503,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Charli
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1378304875 stripped
@@ -91832,7 +91874,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroy_when_finished: 0
-  start_conversation_when_done: {fileID: 282285652}
+  start_conversation_when_done: {fileID: 321163485}
   cur_node: 0
   active: 0
   finished_conversation: 0
@@ -91907,7 +91949,7 @@ MonoBehaviour:
   actor_name: Deepak
   slide_out: 0
   fade_out: 1
-  fade_out_time: 1
+  fade_out_time: 0.1
 --- !u!1 &1407488800
 GameObject:
   m_ObjectHideFlags: 0
@@ -94305,7 +94347,7 @@ Transform:
   - {fileID: 1698924340}
   - {fileID: 540474212}
   m_Father: {fileID: 321163484}
-  m_RootOrder: 28
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1456094371
 MonoBehaviour:
@@ -95622,7 +95664,7 @@ Transform:
   - {fileID: 1326394829}
   - {fileID: 1077731558}
   m_Father: {fileID: 321163484}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1503585111
 MonoBehaviour:
@@ -95671,7 +95713,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1999343970}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1505962994
 MonoBehaviour:
@@ -95724,7 +95766,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 321163484}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1507828991
 AudioSource:
@@ -97140,6 +97182,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Beau
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1531608383 stripped
@@ -98539,7 +98585,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 89a7ffa498c22ee4890eceff649913dc, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &1560785284
@@ -99349,6 +99395,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Charli
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -100204,7 +100254,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1999343970}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1582680705
 MonoBehaviour:
@@ -103667,7 +103717,7 @@ Transform:
   - {fileID: 100794553}
   - {fileID: 1026969928}
   m_Father: {fileID: 321163484}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1610210378
 MonoBehaviour:
@@ -104629,7 +104679,7 @@ Transform:
   - {fileID: 928414301}
   - {fileID: 926363889}
   m_Father: {fileID: 321163484}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1621662133
 MonoBehaviour:
@@ -104678,7 +104728,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1999343970}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1625270069
 MonoBehaviour:
@@ -105020,56 +105070,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!1 &1631447757
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1631447758}
-  - component: {fileID: 1631447759}
-  m_Layer: 0
-  m_Name: Set Background
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1631447758
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1631447757}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 655858618}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1631447759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1631447757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5176883eab49b6d4e9279aae31e3ee3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_to_next_node: 1
-  executed_from_load: 0
-  sprite: {fileID: 21300000, guid: b7950e61dfc582b4ea6517a2cdb71583, type: 3}
-  set_foreground: 0
-  fade_out: 0
-  fade_in: 0
 --- !u!1 &1633490272
 GameObject:
   m_ObjectHideFlags: 0
@@ -105556,6 +105556,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Charli
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1636507063 stripped
@@ -105940,6 +105944,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Beau
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -107894,7 +107902,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 7f80153007d734b408103605110c1865, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &1698956301
@@ -108119,6 +108127,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Charli
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -110005,6 +110017,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Beau
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1751574712 stripped
@@ -110279,7 +110295,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: a7a948a6f69c9954aa7561743748c324, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &1757727662
@@ -110556,6 +110572,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Beau
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -111961,7 +111981,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: cda8427221d0b054ea8e3e0e19804cdf, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &1780271697
@@ -113316,7 +113336,7 @@ Transform:
   m_Children:
   - {fileID: 639995271}
   m_Father: {fileID: 321163484}
-  m_RootOrder: 27
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1796960865
 GameObject:
@@ -113864,7 +113884,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1999343970}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1812953942
 MonoBehaviour:
@@ -113944,6 +113964,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Charli
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -114118,6 +114142,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Beau
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -115156,7 +115184,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: cbcdfb4a2e874e24a8489b00a0153393, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &1854932475
@@ -115698,6 +115726,10 @@ PrefabInstance:
       propertyPath: actor_name
       value: Beau
       objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1857117746 stripped
@@ -116056,7 +116088,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 321163484}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1871222159
 AudioSource:
@@ -118534,7 +118566,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: cbcdfb4a2e874e24a8489b00a0153393, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &1889099016
@@ -118672,7 +118704,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1999343970}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1891601522
 AudioSource:
@@ -120822,7 +120854,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 655858618}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1927713108
 AudioSource:
@@ -121407,7 +121439,7 @@ Transform:
   m_Children:
   - {fileID: 1241435666}
   m_Father: {fileID: 321163484}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1939913589
 MonoBehaviour:
@@ -121637,7 +121669,7 @@ Transform:
   - {fileID: 1951307240}
   - {fileID: 988351094}
   m_Father: {fileID: 321163484}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1944507504
 GameObject:
@@ -122317,7 +122349,7 @@ MonoBehaviour:
   actor_name: Breanna
   actor_name_from: 0
   entrance_type: 1
-  fade_in_time: 1
+  fade_in_time: 0.1
   destination: 3
   custom_position: {fileID: 0}
 --- !u!1001 &1966197506
@@ -122382,6 +122414,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Charli
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -122671,6 +122707,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Charli
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -123453,7 +123493,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 655858618}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1987018482
 MonoBehaviour:
@@ -123472,9 +123512,9 @@ MonoBehaviour:
   actor_name: Charli
   actor_name_from: 0
   entrance_type: 1
-  fade_in_time: 1
+  fade_in_time: 0.1
   destination: 3
-  custom_position: {fileID: 0}
+  custom_position: {fileID: 7509519031959263436}
 --- !u!1001 &1988796963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -123994,7 +124034,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1999343970}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1993584298
 MonoBehaviour:
@@ -124454,7 +124494,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 936824707}
   - {fileID: 1582680704}
   - {fileID: 1304836526}
   - {fileID: 1505962993}
@@ -124502,7 +124541,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 321163484}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2004185306
 MonoBehaviour:
@@ -124521,9 +124560,9 @@ MonoBehaviour:
   actor_name: Deepak
   actor_name_from: 0
   entrance_type: 1
-  fade_in_time: 1
+  fade_in_time: 0.1
   destination: 3
-  custom_position: {fileID: 0}
+  custom_position: {fileID: 7509519031959263436}
 --- !u!1 &2005593635
 GameObject:
   m_ObjectHideFlags: 0
@@ -125762,7 +125801,7 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: cda8427221d0b054ea8e3e0e19804cdf, type: 3}
-  fade_in_new_image: 1
+  fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &2054940077
@@ -127989,7 +128028,7 @@ MonoBehaviour:
   actor_name: Deepak
   slide_out: 0
   fade_out: 1
-  fade_out_time: 1
+  fade_out_time: 0.1
 --- !u!1001 &2101524028
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -128052,6 +128091,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Beau
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -129503,7 +129546,7 @@ Transform:
   - {fileID: 1340092028}
   - {fileID: 659440376}
   m_Father: {fileID: 321163484}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2118140031
 MonoBehaviour:
@@ -129584,6 +129627,10 @@ PrefabInstance:
     - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
       propertyPath: actor_name
       value: Beau
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403902, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
+      propertyPath: fade_in_new_image
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
@@ -129674,7 +129721,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 655858618}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2123500596
 MonoBehaviour:
