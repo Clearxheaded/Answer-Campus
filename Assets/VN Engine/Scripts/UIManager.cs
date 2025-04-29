@@ -21,7 +21,9 @@ namespace VNEngine
         public Font[] fonts;
 
         public Transform actor_parent;
-        public Text text_panel;
+        public RectTransform dialogue_text_panel_container; // the actual full panel
+        public Text dialogue_text; // the Text inside
+
         public RectTransform speaker_panel_container;
         public Text speaker_name_text;
         public GameObject choice_panel;
@@ -73,6 +75,7 @@ namespace VNEngine
         public float canvas_width;
         public float canvas_height;
         private string lastSpeakerName = "";
+        private string lastSpeakerNameForDialogueText = "";
 
         public void MoveSpeakerPanelToActor(string actorName)
         {
@@ -218,16 +221,22 @@ private IEnumerator SmoothMoveSpeakerPanel(Vector2 targetPosition)
             Set_Language(PlayerPrefs.GetString("Language", LocalizationManager.Supported_Languages[0]));
         }
 
-        public void AnimateDialogueTextPanel()
+        public void AnimateDialogueTextPanel(string currentSpeakerName)
         {
-            RectTransform dialogueRect = text_panel.GetComponent<RectTransform>();
-            CanvasGroup dialogueCanvasGroup = text_panel.GetComponent<CanvasGroup>();
+            // Only animate if the speaker has changed
+            if (lastSpeakerNameForDialogueText == currentSpeakerName)
+                return; // Same speaker, don't reanimate
+
+            lastSpeakerNameForDialogueText = currentSpeakerName;
+
+            RectTransform dialogueRect = dialogue_text_panel_container;
+            CanvasGroup dialogueCanvasGroup = dialogue_text_panel_container.GetComponent<CanvasGroup>();
 
             if (dialogueCanvasGroup == null)
-                dialogueCanvasGroup = text_panel.gameObject.AddComponent<CanvasGroup>();
+                dialogueCanvasGroup = dialogue_text_panel_container.gameObject.AddComponent<CanvasGroup>();
 
             Vector2 originalPosition = dialogueRect.anchoredPosition;
-            Vector2 startPosition = originalPosition + new Vector2(0, -30f); // 30 pixels lower
+            Vector2 startPosition = originalPosition + new Vector2(0, -30f); // slide up by 30 pixels
             dialogueRect.anchoredPosition = startPosition;
 
             dialogueCanvasGroup.alpha = 0f;

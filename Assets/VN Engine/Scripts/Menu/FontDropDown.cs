@@ -77,7 +77,7 @@ namespace VNEngine
         public void SetDialogueFont(Font font)
         {
             UIManager.ui_manager.speaker_name_text.font = font;
-            UIManager.ui_manager.text_panel.font = font;
+            UIManager.ui_manager.dialogue_text.font = font;
         }
     }
 }

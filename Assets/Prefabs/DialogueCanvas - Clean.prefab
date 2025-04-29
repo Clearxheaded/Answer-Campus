@@ -5484,7 +5484,8 @@ MonoBehaviour:
   fonts:
   - {fileID: 12800000, guid: 3de449edf2ecb304082be44777698ada, type: 3}
   actor_parent: {fileID: 2493814459898469055}
-  text_panel: {fileID: 2493814459865397025}
+  dialogue_text_panel_container: {fileID: 2493814459898450359}
+  dialogue_text: {fileID: 2493814459865397025}
   speaker_panel_container: {fileID: 6949990363796653807}
   speaker_name_text: {fileID: 2493814459865393391}
   choice_panel: {fileID: 2493814459876610145}
