@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,54 +11,46 @@ public class Map : MonoBehaviour
     private List<CharacterLocation> characterLocations;
     public Characters characters;
     // Start is called before the first frame update
-    void Start() {
-            characterLocations = PlayerPrefsExtra.GetList<CharacterLocation>("characterLocations", new List<CharacterLocation>());
-            Location[] locations = GetComponentsInChildren<Location>();
-            for (int i = 0; i < lockableLocations.Length; i++)
-            {
-                foreach (var characterLocation in characterLocations)
-                {
-                    // Check if the character's location matches the active scene
-                    if (characterLocation.location == lockableLocations[i].name)
-                    {
-                        for (int j = 0; j < characters.profiles.Length; j++)
-                        {
-                            if (characters.profiles[j].character == characterLocation.character)
-                            {
-                                // Assign the profile picture to the location's UI
-                                lockableLocations[i].GetComponent<Button>().interactable = true;
-                                lockableLocations[i].characterWaiting.sprite = characters.profiles[j].picture;
-                                lockableLocations[i].characterWaiting.gameObject.SetActive(true); // Show the profile picture
-                            }
-                            else
-                            {
-//                                lockableLocations[i].GetComponent<Button>().interactable = false;
-//                                lockableLocations[i].characterWaiting.gameObject.SetActive(false); // Show the profile picture
-                                
-                            }
-                        }
-                    }
-                }
-            }
-            foreach (var t in locations)
-            {
-                for (int j = 0; j < characterLocations.Count; j++)
-                {
-                    if (t.scene == characterLocations[j].location)
-                    {
-                        for (int k = 0; k < characters.profiles.Length; k++)
-                        {
-                            if (characterLocations[j].character == characters.profiles[k].character)
-                            {
-                                t.characterWaiting.sprite = characters.profiles[k].picture;
-                                t.characterWaiting.gameObject.SetActive(true);
-                                break;
-                            }
-                        }
-                    }
-                }
-            }
+    void Start()
+    {
+        characterLocations = PlayerPrefsExtra.GetList<CharacterLocation>("characterLocations", new List<CharacterLocation>());
+        var allLocations = GetComponentsInChildren<Location>();
 
+        // Step 1: Lock all lockable locations by default
+        foreach (var location in lockableLocations)
+        {
+            location.GetComponent<Button>().interactable = false;
+            location.characterWaiting.gameObject.SetActive(false);
+        }
+
+        // Step 2: Place character images and unlock matching locations
+        foreach (var characterLocation in characterLocations)
+        {
+            // Find matching profile for the character
+            var profile = Array.Find(characters.profiles, p => p.character == characterLocation.character);
+            if (profile.picture == null) continue; // skip if no picture found
+
+            foreach (var location in allLocations)
+            {
+                // Match either by scene or name (support both use cases)
+                if (location.scene == characterLocation.location || location.name == characterLocation.location)
+                {
+                    location.characterWaiting.sprite = profile.picture;
+                    location.characterWaiting.gameObject.SetActive(true);
+
+                    // If this location is lockable, unlock it
+                    if (Array.Exists(lockableLocations, l => l == location))
+                    {
+                        location.GetComponent<Button>().interactable = true;
+                        Debug.Log($"Unlocked Location {location.name} with character {profile.character}.");
+                    }
+
+                    break; // match found, no need to check other locations
+                }
+            }
+        }
     }
+
+
     
 }

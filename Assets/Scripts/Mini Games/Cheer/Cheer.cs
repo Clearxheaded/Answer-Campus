@@ -35,4 +35,6 @@ public class Cheer : MonoBehaviour
         }
         Debug.LogWarning($"[Cheer] No sprite assigned for combo {combo}");
     }
+    
+    
 }

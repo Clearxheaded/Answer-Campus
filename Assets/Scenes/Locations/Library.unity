@@ -5525,6 +5525,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 050186d06c7d3ba4ebfcd126475dd89e, type: 3}
+--- !u!224 &72059954 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7509519032867895242, guid: 050186d06c7d3ba4ebfcd126475dd89e, type: 3}
+  m_PrefabInstance: {fileID: 72059953}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &72722193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7101,7 +7106,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: Hey! Nice to see you again!
+  text: Hey [s:Player Name]! Nice to see you again!
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1
@@ -21607,7 +21612,7 @@ MonoBehaviour:
   entrance_type: 1
   fade_in_time: 1
   destination: 3
-  custom_position: {fileID: 0}
+  custom_position: {fileID: 1450658869}
 --- !u!1001 &278873762
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29272,6 +29277,76 @@ Transform:
   m_Father: {fileID: 1492289112}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &413792623
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1801678545}
+    m_Modifications:
+    - target: {fileID: 183544793268852597, guid: 6a26458149ea949ffaab1fb0618d25f4, type: 3}
+      propertyPath: character
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 183544793268852597, guid: 6a26458149ea949ffaab1fb0618d25f4, type: 3}
+      propertyPath: locationScene
+      value: Library
+      objectReference: {fileID: 0}
+    - target: {fileID: 3964208818591883344, guid: 6a26458149ea949ffaab1fb0618d25f4, type: 3}
+      propertyPath: m_Name
+      value: Remove Map Location
+      objectReference: {fileID: 0}
+    - target: {fileID: 3964208818591883345, guid: 6a26458149ea949ffaab1fb0618d25f4, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3964208818591883345, guid: 6a26458149ea949ffaab1fb0618d25f4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3964208818591883345, guid: 6a26458149ea949ffaab1fb0618d25f4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3964208818591883345, guid: 6a26458149ea949ffaab1fb0618d25f4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3964208818591883345, guid: 6a26458149ea949ffaab1fb0618d25f4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3964208818591883345, guid: 6a26458149ea949ffaab1fb0618d25f4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3964208818591883345, guid: 6a26458149ea949ffaab1fb0618d25f4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3964208818591883345, guid: 6a26458149ea949ffaab1fb0618d25f4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3964208818591883345, guid: 6a26458149ea949ffaab1fb0618d25f4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3964208818591883345, guid: 6a26458149ea949ffaab1fb0618d25f4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3964208818591883345, guid: 6a26458149ea949ffaab1fb0618d25f4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6a26458149ea949ffaab1fb0618d25f4, type: 3}
+--- !u!4 &413792624 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3964208818591883345, guid: 6a26458149ea949ffaab1fb0618d25f4, type: 3}
+  m_PrefabInstance: {fileID: 413792623}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &416191464
 GameObject:
   m_ObjectHideFlags: 0
@@ -45673,7 +45748,7 @@ MonoBehaviour:
   entrance_type: 1
   fade_in_time: 1
   destination: 3
-  custom_position: {fileID: 0}
+  custom_position: {fileID: 72059954}
 --- !u!1 &513276050
 GameObject:
   m_ObjectHideFlags: 0
@@ -56319,7 +56394,8 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: Hey, uh... How did you do on your midterms, if you don't mind me asking?
+  text: Hey [s:Player Name], uh... How did you do on your midterms, if you don't
+    mind me asking?
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1
@@ -83583,7 +83659,7 @@ MonoBehaviour:
   entrance_type: 1
   fade_in_time: 1
   destination: 3
-  custom_position: {fileID: 0}
+  custom_position: {fileID: 1450658869}
 --- !u!1 &1052742176
 GameObject:
   m_ObjectHideFlags: 0
@@ -85608,7 +85684,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1801678545}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1092648578
 MonoBehaviour:
@@ -91432,7 +91508,7 @@ MonoBehaviour:
   entrance_type: 1
   fade_in_time: 1
   destination: 3
-  custom_position: {fileID: 0}
+  custom_position: {fileID: 72059954}
 --- !u!1 &1178665406
 GameObject:
   m_ObjectHideFlags: 0
@@ -137950,6 +138026,7 @@ Transform:
   m_Children:
   - {fileID: 2017505747}
   - {fileID: 10832278}
+  - {fileID: 413792624}
   - {fileID: 1092648577}
   m_Father: {fileID: 329499975}
   m_RootOrder: 18
@@ -152477,7 +152554,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: Hi! Nice seeing you here!
+  text: Hi! Nice seeing you here [s:Player Name]!
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1
@@ -152689,7 +152766,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -452034133652302466, guid: c87e9d001b140b24e93b21ae3617e89b, type: 3}
       propertyPath: week
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5275582187492880113, guid: c87e9d001b140b24e93b21ae3617e89b, type: 3}
       propertyPath: m_RootOrder
@@ -156118,7 +156195,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: 'Hey, care if I join you for some studying. '
+  text: Hey, care if I join you for some studying?
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1

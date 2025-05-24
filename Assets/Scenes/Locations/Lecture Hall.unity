@@ -721,7 +721,7 @@ GameObject:
   - component: {fileID: 22428425}
   - component: {fileID: 22428426}
   m_Layer: 0
-  m_Name: Third or Fourth Week - Perspective
+  m_Name: Fourth Week
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34288,7 +34288,7 @@ MonoBehaviour:
   executed_from_load: 0
   print_all_stats_to_console: 0
   stat_type: 0
-  stat_name: 
+  stat_name: Week
   set_number_to: 14
   modify_number_amount: 0
   set_bool_to: 0
@@ -43269,7 +43269,7 @@ MonoBehaviour:
   - 
   Bool_Compare_Value: 01000000000000000000
   Float_Compare_Value:
-  - 3
+  - 4
   - 0
   - 0
   - 0

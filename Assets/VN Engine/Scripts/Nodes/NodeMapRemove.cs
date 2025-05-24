@@ -14,19 +14,9 @@ namespace VNEngine
         // Called initially when the node is run, put most of your logic here
         public override void Run_Node()
         {
-
             List<CharacterLocation> characterLocations = PlayerPrefsExtra.GetList<CharacterLocation>("characterLocations", new List<CharacterLocation>());
-            CharacterLocation characterLocation = new CharacterLocation
-            {
-                character = character,
-                location = locationScene
-            };
-            if (characterLocations.Contains(characterLocation))
-            {
-                characterLocations.Remove(characterLocation);
-                PlayerPrefsExtra.SetList("characterLocations", characterLocations);
-            }
-
+            characterLocations.RemoveAll(cl => cl.character == character && cl.location == locationScene);
+            PlayerPrefsExtra.SetList("characterLocations", characterLocations);
             Finish_Node();
         }
 
