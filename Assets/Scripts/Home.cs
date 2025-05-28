@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using VNEngine;
+using System.Linq;
 public class Home : MonoBehaviour
 {
     public GameObject phone;
@@ -18,6 +19,15 @@ public class Home : MonoBehaviour
     void Update()
     {
         
+    }
+    public static (int wins, int losses) GetRecord()
+    {
+        string json = StatsManager.Get_String_Stat("FootballSchedule");
+        var wrapper = JsonUtility.FromJson<FootballGameListWrapper>(json);
+
+        int wins = wrapper.games.Count(g => g.played && g.won == true);
+        int losses = wrapper.games.Count(g => g.played && g.won == false);
+        return (wins, losses);
     }
 
     public void Study()

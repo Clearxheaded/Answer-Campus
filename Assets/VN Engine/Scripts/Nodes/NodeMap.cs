@@ -15,41 +15,30 @@ namespace VNEngine
         // Called initially when the node is run, put most of your logic here
         public override void Run_Node()
         {
-
             List<CharacterLocation> characterLocations = PlayerPrefsExtra.GetList<CharacterLocation>("characterLocations", new List<CharacterLocation>());
-            CharacterLocation characterLocation = new CharacterLocation
+
+// Remove *any* character already at this location
+            characterLocations.RemoveAll(loc => loc.location == locationScene);
+
+            Debug.Log($"Attempting to add character pin to Map : {character} at {locationScene}");
+
+            if (addLocationToMap)
             {
-                character = character,
-                location = locationScene
-            };
-            if (!characterLocations.Contains(characterLocation))
-            {
-                Debug.Log("Attempting to add character pin to Map : " + character + " at " + locationScene);
-                if (addLocationToMap)
+                Debug.Log($"{character} added to Map");
+
+                characterLocations.Add(new CharacterLocation
                 {
-                    Debug.Log($"{character} added to Map");
-                    characterLocations.Add(characterLocation);
-                }
-                else
-                {
-                    for (int i = 0; i < characterLocations.Count; i++)
-                    {
-                        if(locationScene == characterLocations[i].location && character == characterLocations[i].character)
-                        {
-                            Debug.LogWarning($"{character} already added to map");
-                            characterLocations.RemoveAt(i);
-                            break;
-                        }
-                    }
-                }
-                Debug.Log($"Setting list of character locations");
-                PlayerPrefsExtra.SetList("characterLocations", characterLocations);
+                    character = character,
+                    location = locationScene
+                });
             }
             else
             {
-                Debug.Log("Duplicate Character Location " + characterLocation);
-
+                Debug.Log($"{character} removed from Map (via addLocationToMap = false)");
+                // No need to remove here; already removed above
             }
+
+            PlayerPrefsExtra.SetList("characterLocations", characterLocations);
 
             Finish_Node();
         }

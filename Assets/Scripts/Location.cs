@@ -20,9 +20,11 @@ public class Location : MonoBehaviour
     }
     public void GoToLocation()
     {
+  
         List<CharacterLocation> characterLocations = PlayerPrefsExtra.GetList<CharacterLocation>("characterLocations", new List<CharacterLocation>());
+  /*
         int locationIndex = -1;
-        Debug.Log("LOCATION LIST: " + characterLocations);
+  
         for(int i = 0; i < characterLocations.Count; i++) {
             if (characterLocations[i].location == scene)
             {
@@ -39,7 +41,7 @@ public class Location : MonoBehaviour
         {
             Debug.LogWarning("No matching character location found for scene: " + scene);
         }
-
+*/
         PlayerPrefsExtra.SetList<CharacterLocation>("characterLocations", characterLocations);
 
         // Retrieve the messages list from PlayerPrefsExtra

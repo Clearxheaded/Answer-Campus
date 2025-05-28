@@ -51,7 +51,7 @@ public class LetterMovement : MonoBehaviour {
     /// </summary>
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("EraserCollider")) {
-
+            manager.UnregisterActiveColumn(boxIndex);
             if (AudioManager.Instance != null && eraserClip != null) {
                 AudioManager.Instance.PlaySFX(eraserClip);
             }

@@ -546,12 +546,6 @@ namespace VNEngine
 
                 StatsManager.Set_Boolean_Stat(Name_Of_Choice + ": " + Button_Text[choice_number], true);
 
-                if (Logging.Instance == null)
-                {
-                    Debug.LogError("Logging.Instance is null.");
-                    return;
-                }
-
                 if (originalOrder == null || randomizedOrder == null)
                 {
                     Debug.LogError($"originalOrder or randomizedOrder is null. originalOrder: {originalOrder}, randomizedOrder: {randomizedOrder}");
@@ -560,7 +554,13 @@ namespace VNEngine
                 Debug.Log("ORDER: " + originalOrder.ToString());
                 Debug.Log("RANDOM ORDER: " + randomizedOrder.ToString());
                 //OPEN GAME DATA LOGGING IS CURRENTLY OFF. UNCOMMENT TO ADD.
-                // Logging.Instance.LogPlayerChoice(Name_Of_Choice, choice_number, originalOrder, randomizedOrder);
+                if (Logging.Instance != null)
+                {
+                    // Logging.Instance.LogPlayerChoice(Name_Of_Choice, choice_number, originalOrder, randomizedOrder);
+
+                }
+
+
             }
             catch (Exception ex)
             {

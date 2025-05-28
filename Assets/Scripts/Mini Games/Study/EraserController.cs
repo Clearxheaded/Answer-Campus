@@ -10,7 +10,6 @@ public class EraserController : MonoBehaviour {
     public float moveSpeed = 5f;
 
     [Tooltip("The Y value where the eraser should remain.")]
-    public float eraserY = -1.55f;
     public float eraserZ = 1f;
 
     private Vector3[] eraserPositions;  // Will be generated from boxPositions
@@ -28,7 +27,7 @@ public class EraserController : MonoBehaviour {
         // Use each box's X-value, but fix the Y at eraserY and Z at eraserZ
         for (int i = 0; i < boxPositions.Length; i++) {
             float boxX = boxPositions[i].position.x;
-            eraserPositions[i] = new Vector3(boxX, eraserY, eraserZ);
+            eraserPositions[i] = new Vector3(boxX, transform.position.y, eraserZ);
         }
 
         // Initialize eraser at the first position
@@ -73,7 +72,7 @@ public class EraserController : MonoBehaviour {
 
     /// <summary>
     /// Called when another object (e.g. a Letter) enters this collider.
-    /// If it’s tagged “Letter,” we destroy it.
+    /// If itï¿½s tagged ï¿½Letter,ï¿½ we destroy it.
     /// </summary>
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Letter")) {

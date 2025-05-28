@@ -5,6 +5,77 @@ using VNEngine;
 using TMPro;
 using System;
 using System.Collections.Generic;
+[Serializable]
+
+public static class FootballScheduler
+{
+    static FootballTeam[] opponents = new FootballTeam[]
+    {
+        new FootballTeam("Northport University", "Grizzlies"),
+        new FootballTeam("Central Tech", "Shock"),
+        new FootballTeam("Valley State", "Hornets"),
+        new FootballTeam("Eastern Pines", "Wolves"),
+        new FootballTeam("Bayfront College", "Surge"),
+        new FootballTeam("Riverside A&M", "Gators"),
+        new FootballTeam("Highland University", "Stags"),
+        new FootballTeam("Metro Institute", "Titans")
+    };
+
+    public static void GenerateSchedule()
+    {
+        List<FootballGame> schedule = new List<FootballGame>();
+        List<int> possibleWeeks = new List<int> { 2, 3, 4, 5, 6, 7, 8, 9 };
+        Shuffle(possibleWeeks);
+
+        for (int i = 0; i < 8; i++)
+        {
+            schedule.Add(new FootballGame
+            {
+                week = possibleWeeks[i],
+                opponent = opponents[i],
+                isHome = true,
+                played = false
+            });
+        }
+
+        string json = JsonUtility.ToJson(new FootballGameListWrapper { games = schedule });
+        StatsManager.Set_String_Stat("FootballSchedule", json);
+    }
+    public static FootballGame GetThisWeeksGame(int currentWeek)
+    {
+        if (!StatsManager.String_Stat_Exists("FootballSchedule"))
+        {
+            FootballScheduler.GenerateSchedule(); // only if safe to call
+        }
+
+        string json = StatsManager.Get_String_Stat("FootballSchedule");
+        if (string.IsNullOrEmpty(json)) return null;
+
+        var wrapper = JsonUtility.FromJson<FootballGameListWrapper>(json);
+        if (wrapper?.games == null) return null;
+
+        return wrapper.games.Find(g => g.week == currentWeek);
+    }
+
+
+    static void Shuffle<T>(List<T> list)
+    {
+        for (int i = 0; i < list.Count; i++)
+        {
+            int rnd = UnityEngine.Random.Range(i, list.Count);
+            T temp = list[rnd];
+            list[rnd] = list[i];
+            list[i] = temp;
+        }
+    }
+
+}
+
+[Serializable]
+public class FootballGameListWrapper
+{
+    public List<FootballGame> games = new List<FootballGame>();
+}
 
 public static class SemesterHelper
 {
@@ -34,8 +105,33 @@ public static class SemesterHelper
 
     public static int GetDaysToCrossOut(int week)
     {
-        return week * DaysPerWeek;
+        if (week <= 0) return 0;
+
+        int fullWeeks = Mathf.Min(week - 1, 4);
+        int days = fullWeeks * DaysPerWeek;
+
+        if (week <= 5)
+        {
+            string key = $"Week_{week}_PartialDays";
+            int partialDays;
+
+            if (StatsManager.Numbered_Stat_Exists(key))
+            {
+                partialDays = (int)StatsManager.Get_Numbered_Stat(key);
+            }
+            else
+            {
+                int max = Mathf.Min(35 - days, DaysPerWeek);
+                partialDays = UnityEngine.Random.Range(1, max + 1);
+                StatsManager.Set_Numbered_Stat(key, partialDays);
+            }
+
+            days += partialDays;
+        }
+
+        return days;
     }
+
     public static string GetStudyPrompt(int currentWeek)
     {
         int weeksUntilMidterms = MidtermsWeek - currentWeek;
@@ -115,12 +211,18 @@ public class Calendar : MonoBehaviour
         if(StatsManager.Numbered_Stat_Exists("Week"))
         {
             week = (int)StatsManager.Get_Numbered_Stat("Week");
+            if (week <= 1)
+            {
+                FootballScheduler.GenerateSchedule();
+            }
         }
         else
         {
+            FootballScheduler.GenerateSchedule();
             week = 1;
         }
-
+        string json = StatsManager.Get_String_Stat("FootballSchedule");
+        Debug.Log($"[Schedule JSON] {json}");
         month.text = SemesterHelper.GetMonthForWeek(week);
         string prompt = SemesterHelper.GetStudyPrompt(week);
         if (!string.IsNullOrEmpty(prompt))

@@ -39,7 +39,6 @@ public class CutsceneScript : MonoBehaviour
     {
         if (nextSentenceTime <= Time.time && loadSequence == 0)
         {
-            Debug.Log("Setting next text");
 
             nextSentenceTime = Time.time + timeBetweenSentences;
             if(sentenceIndex < sentences.Length)

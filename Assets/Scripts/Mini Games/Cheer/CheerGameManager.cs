@@ -1,9 +1,35 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
+using VNEngine;
+using Random = UnityEngine.Random;
 
+[Serializable]
+public class FootballTeam
+{
+    public string schoolName;
+    public string mascot;
+
+    public FootballTeam(string name, string mascot)
+    {
+        this.schoolName = name;
+        this.mascot = mascot;
+    }
+}
+[Serializable]
+public class FootballGame
+{
+    public int week;
+    public FootballTeam opponent;
+    public bool isHome;
+    public bool played;
+    public bool won; // null = not played yet
+    
+}
 public enum CheerDirection { Up, Down, Left, Right }
 
 public enum CheerCombo
@@ -40,7 +66,7 @@ public class CheerClip
 
 public class CheerGameManager : MonoBehaviour
 {
-    [Header("UI References")]
+    [Header("UI References")] public GameObject maqrueePanel;
     public GameObject playableGameRoot;
     //public TextMeshProUGUI comboDisplayText;
     public GameObject scoreboardUI;
@@ -49,6 +75,7 @@ public class CheerGameManager : MonoBehaviour
     public TextMeshProUGUI homeScoreText;
     public TextMeshProUGUI awayScoreText;
     public TextMeshProUGUI awayTeamNameText;
+    public TextMeshProUGUI scoreboardAwayTeamText;
     public TextMeshProUGUI quarterText;
     [SerializeField] public List<MatchSequence> matchSequences;
 
@@ -81,6 +108,10 @@ public class CheerGameManager : MonoBehaviour
     [Header("Round Settings")]
     public float comboDisplayTime = 1f;
     private int combosMade = 0;
+    public int gameNumber = 0;
+    public int weekNumber = 0;
+    string awayTeam; 
+
     private static readonly Dictionary<CheerCombo, CheerDirection[]> comboMap = new()
     {
         { CheerCombo.LeftDown,  new[]{ CheerDirection.Left,  CheerDirection.Down  } },
@@ -93,13 +124,29 @@ public class CheerGameManager : MonoBehaviour
 
     void Start()
     {
+        int currentWeek = (int)StatsManager.Get_Numbered_Stat("Week");
+        FootballGame game = FootballScheduler.GetThisWeeksGame(currentWeek);
+
+        if (game != null && game.isHome && !game.played)
+        {
+            // Trigger cheer mini-game
+            // You can access: game.opponent
+            awayTeamNameText.text = game.opponent.schoolName;
+            scoreboardAwayTeamText.text = game.opponent.mascot;
+        }
+        else
+        {
+        Debug.Log($"No game this week, going home...");
+            return;
+            // No game this week, or already played
+        }
         StartCoroutine(GameFlowRoutine());
     }
 
     IEnumerator GameFlowRoutine()
     {
         yield return StartCoroutine(FadeFromBlack());
-        scoreboardUI.SetActive(true);
+        maqrueePanel.SetActive(false);
         if (playableGameRoot != null) playableGameRoot.SetActive(false);
 
         for (int q = 1; q <= 4; q++)
@@ -248,8 +295,30 @@ public class CheerGameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
     }
+    public static void RecordGameResult(int week, bool didWin)
+    {
+        string json = StatsManager.Get_String_Stat("FootballSchedule");
+        var wrapper = JsonUtility.FromJson<FootballGameListWrapper>(json);
 
-    void EndGame() => Debug.Log("Game Over - Final Routine Placeholder");
+        var game = wrapper.games.Find(g => g.week == week);
+        if (game != null)
+        {
+            game.played = true;
+            game.won = didWin;
+
+            string updatedJson = JsonUtility.ToJson(wrapper);
+            StatsManager.Set_String_Stat("FootballSchedule", updatedJson);
+        }
+    }
+
+    void EndGame(bool won = false)
+    {
+        Debug.Log("Game Over - Final Routine Placeholder");
+        RecordGameResult(weekNumber, won);
+        weekNumber++;
+        StatsManager.Set_Numbered_Stat("Week", weekNumber);
+        SceneManager.LoadScene("Post Game");
+    }
 
     void Update()
     {

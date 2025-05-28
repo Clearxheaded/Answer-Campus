@@ -23,12 +23,6 @@ public class SaveProgress : MonoBehaviour
     public void StartNewGame(GameObject newGamePanelOverride)
     {
         
-        if (PlayerPrefs.HasKey("Leilani"))
-        {
-            newGamePanelOverride.SetActive(true);
-        }
-        else
-        {
             Debug.Log("Reseting player prefs...");
             Reset();
             Debug.Log("Saving friendship player prefs...");
@@ -36,7 +30,6 @@ public class SaveProgress : MonoBehaviour
             Debug.Log("Loading Cutscene...");
             GetComponent<MenuOptions>().LoadScene(GetComponent<MenuOptions>().sceneToLoad);
            
-        }
     }
     public void SetNextScene()
     {
@@ -44,14 +37,6 @@ public class SaveProgress : MonoBehaviour
         Debug.Log("Next Scene: " + nextScene);
     }
 
-    public void UpdateFriendship()
-    {
-        for(int i = 0; i < relationships.Length; i++)
-        {
-            PlayerPrefs.SetInt(relationships[i].character, (int)relationships[i].relationship);
-
-        }
-    }
 
     public void Reset()
     {
@@ -63,7 +48,6 @@ public class SaveProgress : MonoBehaviour
     {
         //CALLLED WHEN CLICKING ON CHOICE
         Debug.Log("Saving Progress...");
-        UpdateFriendship();
         SetNextScene();
     }
 }
