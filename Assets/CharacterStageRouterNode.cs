@@ -63,8 +63,7 @@ namespace VNEngine
             Debug.Log($"Routing unseen fallback {i}: {fallback.name}");
             StatsManager.Set_Boolean_Stat(fallbackKey, true);
             fallback.Start_Conversation();
-            Finish_Node();
-            return;
+            break;
         }
     }
 

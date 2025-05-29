@@ -79,9 +79,8 @@ public class FootballGameListWrapper
 
 public static class SemesterHelper
 {
-    public const int FinalsWeek = 16;
+    public const int FinalsWeek = 15;
     public const int MidtermsWeek = 7;
-
     public const int MidtermsWarningStart = 4;
     public const int FinalsWarningStart = 5;
     public const int DaysPerWeek = 7;
@@ -205,6 +204,8 @@ public class Calendar : MonoBehaviour
     public Transform calendarGrid;
     public GameObject checkmark;
     public int week;
+
+    public Location finalExamLocation;
 // Start is called before the first frame update
     void Start()
     {
@@ -233,6 +234,11 @@ public class Calendar : MonoBehaviour
         for (int i = 0; i < SemesterHelper.GetDaysToCrossOut(week); i++)
         {
             Instantiate(checkmark, calendarGrid);
+        }
+
+        if (week == SemesterHelper.FinalsWeek)
+        {
+            finalExamLocation.GoToLocation();
         }
     }
     

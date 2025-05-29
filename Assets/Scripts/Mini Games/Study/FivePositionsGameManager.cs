@@ -29,6 +29,7 @@ public class FivePositionsGameManager : MonoBehaviour
     public TextMeshProUGUI targetDefinitionText;
     public TextMeshProUGUI countdownText; // "3-2-1" countdown text
     public TextMeshProUGUI scoreText;
+    public ConversationManager endExamConversation;
     private ConversationManager conversationManager;
     [Header("Prefabs/Assets")]
     public GameObject letterPrefab;
@@ -527,6 +528,9 @@ public class FivePositionsGameManager : MonoBehaviour
     /// After a short delay, pause the timer, clear boxes, do a new countdown, then unpause.
     /// </summary>
     private IEnumerator RestartGameRoutine() {
+        //half the time between spawns
+        minSpawnInterval *= .5f;
+        maxSpawnInterval *= .5f;
         // Wait briefly so the player can see the filled boxes
         yield return new WaitForSeconds(2f);
 
@@ -598,7 +602,16 @@ public class FivePositionsGameManager : MonoBehaviour
         if (VNSceneManager.scene_manager != null)
         {
             VNSceneManager.scene_manager.Show_UI(true);
-            VNSceneManager.scene_manager.Start_Conversation(conversationManager);
+            switch (currentMode)
+            {
+                case GameMode.Exam:
+                    VNSceneManager.scene_manager.Start_Conversation(endExamConversation);
+
+                    break;
+                    case GameMode.Group:
+                    VNSceneManager.scene_manager.Start_Conversation(conversationManager);
+                    break;
+            }
         }
         else
         {
