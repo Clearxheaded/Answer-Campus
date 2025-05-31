@@ -11,6 +11,7 @@ public class LetterMovement : MonoBehaviour {
     private char letterChar;
     private Vector3 targetPos;
     private float moveSpeed;
+    private AudioSource audioSource;
     public AudioClip eraserClip;
 
     /// <summary>
@@ -29,6 +30,7 @@ public class LetterMovement : MonoBehaviour {
         this.letterChar = letterChar;
         this.targetPos = targetPos;
         this.moveSpeed = moveSpeed;
+        audioSource = FMODAudioManager.Instance.GetAudioSource();
     }
 
     private void Update() {
@@ -52,9 +54,7 @@ public class LetterMovement : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("EraserCollider")) {
             manager.UnregisterActiveColumn(boxIndex);
-            if (AudioManager.Instance != null && eraserClip != null) {
-                AudioManager.Instance.PlaySFX(eraserClip);
-            }
+            audioSource.PlayOneShot(eraserClip);
             Destroy(gameObject);
         }
     }

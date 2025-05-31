@@ -59,8 +59,10 @@ public struct CheerLeader
 [System.Serializable]
 public class CheerClip
 {
-    public AudioClip countdownClip;
-    public AudioClip gameClip;
+    public string countdownClipEvent;
+    public int countdownParameter;
+    public string gameClipEvent;
+    public int gameClipParameter;
     public float[] beatTimes; // One timestamp (in seconds) per cheer
 }
 
@@ -71,6 +73,7 @@ public class CheerGameManager : MonoBehaviour
     //public TextMeshProUGUI comboDisplayText;
     public GameObject scoreboardUI;
     public AudioSource audioSource;
+    public string crowd;
     public AudioClip introClip;
     public TextMeshProUGUI homeScoreText;
     public TextMeshProUGUI awayScoreText;
@@ -90,13 +93,16 @@ public class CheerGameManager : MonoBehaviour
     public Image glyphA, glyphB;
     public Vector2 glyphOffsetA = new Vector2(-40, 80);
     public Vector2 glyphOffsetB = new Vector2(40, 80);
+
     public Sprite upGlyph, downGlyph, leftGlyph, rightGlyph;
+    public Sprite failUpGlyph, failDownGlyph, failLeftGlyph, failRightGlyph;
     public Color dimColor = new Color(1,1,1,0.4f);
     public Color highlightColor = Color.white;
     public Color successColor = Color.green;
     public Color failColor = Color.red;
 
-    
+    private Dictionary<int, (CheerDirection a, CheerDirection b)> activeDirections = new();
+
     [Header("Game Variables")]
     public CheerClip[] cheers;
     private int homeScore = 0;
@@ -126,20 +132,26 @@ public class CheerGameManager : MonoBehaviour
     {
         int currentWeek = (int)StatsManager.Get_Numbered_Stat("Week");
         FootballGame game = FootballScheduler.GetThisWeeksGame(currentWeek);
+        FMODAudioManager.Instance.PlayMusic(crowd);
 
+        /*
         if (game != null && game.isHome && !game.played)
         {
             // Trigger cheer mini-game
             // You can access: game.opponent
             awayTeamNameText.text = game.opponent.schoolName;
             scoreboardAwayTeamText.text = game.opponent.mascot;
+            FMODAudioManager.Instance.PlayMusic(crowd);
         }
         else
         {
         Debug.Log($"No game this week, going home...");
-            return;
-            // No game this week, or already played
+        // No game this week, or already played
+        SceneManager.LoadScene("Post Game");
+        return;
+            
         }
+        */
         StartCoroutine(GameFlowRoutine());
     }
 
@@ -155,29 +167,32 @@ public class CheerGameManager : MonoBehaviour
             UpdateScoreboardUI();
 
             scoreboardUI.SetActive(true);
+            playableGameRoot.SetActive(false);
             if (introClip != null)
             {
                 audioSource.PlayOneShot(introClip);
                 yield return new WaitForSeconds(introClip.length);
             }
+            playableGameRoot.SetActive(true);
 
             scoreboardUI.SetActive(false);
             if (playableGameRoot != null) playableGameRoot.SetActive(true);
 
             selectedCheerClip = cheers[Random.Range(0, cheers.Length)];
-
-            audioSource.PlayOneShot(selectedCheerClip.countdownClip);
-            yield return new WaitForSeconds(selectedCheerClip.countdownClip.length);
-
-            audioSource.clip = selectedCheerClip.gameClip;
-            audioSource.Play();
-
-            yield return new WaitUntil(() => audioSource.time > 0); // Ensure audio starts before capturing DSP
-
-            double startDSP = AudioSettings.dspTime;
-            yield return StartCoroutine(RunBeatSyncedRound(startDSP));
-
-            audioSource.Stop();
+            
+            yield return StartCoroutine(FMODAudioManager.Instance.PlayOneShotAndWaitPrecise(
+                selectedCheerClip.countdownClipEvent,
+                "Countdown",
+                selectedCheerClip.countdownParameter
+            ));
+            
+            // Wait one frame to ensure playback is initialized
+            yield return null;
+            FMODAudioManager.Instance.PlayOneShot(selectedCheerClip.gameClipEvent,
+                "Cheer",
+                selectedCheerClip.gameClipParameter);
+            float startTime = Time.time;
+            yield return StartCoroutine(RunBeatSyncedRound(startTime));
 
             float amplitudeRatio = amplification / amplificationPerSuccess;
             int totalCombos = selectedCheerClip.beatTimes.Length;
@@ -200,22 +215,38 @@ public class CheerGameManager : MonoBehaviour
 
         EndGame();
     }
-
-    IEnumerator RunBeatSyncedRound(double startDSP)
+    private Sprite GetFailGlyphSprite(CheerDirection dir)
     {
+        return dir switch
+        {
+            CheerDirection.Up => failUpGlyph,
+            CheerDirection.Down => failDownGlyph,
+            CheerDirection.Left => failLeftGlyph,
+            CheerDirection.Right => failRightGlyph,
+            _ => null
+        };
+    }
+
+    IEnumerator RunBeatSyncedRound(float startTime)
+    {
+  
         int beatCount = selectedCheerClip.beatTimes.Length;
         var combos = new List<CheerCombo>((CheerCombo[])System.Enum.GetValues(typeof(CheerCombo)));
         combos.Remove(CheerCombo.Default);
         for (int i = 0; i < beatCount; i++)
         {
-            double targetDSP = startDSP + selectedCheerClip.beatTimes[i];
+            float targetTime = startTime + selectedCheerClip.beatTimes[i];
             CheerCombo combo = combos[Random.Range(0, combos.Count)];
 
             int leaderIdx = i % matchSequences.Count;
             var leader = matchSequences[leaderIdx];
 
-            while (AudioSettings.dspTime < targetDSP)
+            double timeout = 1.0;  // Max seconds to wait for sync
+            double startWait = AudioSettings.dspTime;
+            while (Time.time < targetTime)
+            {
                 yield return null;
+            }
 
             HighlightLeader(leaderIdx);
             MoveSpotlight(leaderIdx);
@@ -227,9 +258,10 @@ public class CheerGameManager : MonoBehaviour
 
             CheerDirection inputA = CheerDirection.Up;
             CheerDirection inputB = CheerDirection.Up;
-            double inputDeadline = (i + 1 < selectedCheerClip.beatTimes.Length)
-                ? startDSP + selectedCheerClip.beatTimes[i + 1]
-                : targetDSP + 1.2;
+            float inputDeadline = (i + 1 < selectedCheerClip.beatTimes.Length)
+                ? startTime + selectedCheerClip.beatTimes[i + 1]
+                : targetTime + 1.2f;
+
             yield return null;
             yield return StartCoroutine(WaitForTwoUniqueDirections((a, b) => {
                 inputA = a;
@@ -258,16 +290,17 @@ public class CheerGameManager : MonoBehaviour
 
     }
 
-    IEnumerator WaitForTwoUniqueDirections(System.Action<CheerDirection, CheerDirection> callback, double deadlineDSP)
+    IEnumerator WaitForTwoUniqueDirections(System.Action<CheerDirection, CheerDirection> callback, float deadlineTime)
     {
         
         CheerDirection? first = null;
         CheerDirection? second = null;
 
-        while (AudioSettings.dspTime < deadlineDSP)
+        while (AudioSettings.dspTime < deadlineTime)
         {
-            if (CheerInputBridge.Instance.TryGetNextDirection(out var dir))
+            if (CheerInputBridge.Instance.TryGetNextDirection(out var dir, out double inputTime))
             {
+                Debug.Log($"[TIMING] Got {dir} at {inputTime:F3}");
                 if (!first.HasValue)
                 {
                     first = dir;
@@ -329,7 +362,7 @@ public class CheerGameManager : MonoBehaviour
     {
         homeScoreText.text = homeScore.ToString();
         awayScoreText.text = awayScore.ToString();
-        quarterText.text = $"Q{currentQuarter}";
+        quarterText.text = $"{currentQuarter}";
     }
 
     CheerCombo GetComboFromDirs(CheerDirection a, CheerDirection b)
@@ -378,6 +411,7 @@ public class CheerGameManager : MonoBehaviour
         // Assign sprites
         leader.cheerleader.glyphA.sprite = GetGlyphSprite(dirs[0]);
         leader.cheerleader.glyphB.sprite = GetGlyphSprite(dirs[1]);
+        activeDirections[idx] = (dirs[0], dirs[1]);
 
         // Set default white color
         leader.cheerleader.glyphA.color = Color.white;
@@ -464,27 +498,42 @@ public class CheerGameManager : MonoBehaviour
             Debug.LogWarning($"[FEEDBACK] Missing glyphs on leader {idx}: A is {(leader.cheerleader.glyphA == null ? "null" : "set")}, B is {(leader.cheerleader.glyphB == null ? "null" : "set")}");
             return;
         }
-
-        var color = success ? successColor : failColor;
-
-        leader.cheerleader.glyphA.color = color;
-        leader.cheerleader.glyphB.color = color;
-
-        Debug.Log($"[FEEDBACK] Set color to {color} on both glyphs");
-
+        if (success)
+        {
+            leader.cheerleader.glyphA.color = successColor;
+            leader.cheerleader.glyphB.color = successColor;
+        }
+        else
+        {
+            if (activeDirections.TryGetValue(idx, out var dirs))
+            {
+                leader.cheerleader.glyphA.sprite = GetFailGlyphSprite(dirs.a);
+                leader.cheerleader.glyphB.sprite = GetFailGlyphSprite(dirs.b);
+            }
+            else
+            {
+                Debug.LogWarning($"Missing direction data for idx {idx}");
+            }
+        }
+        
         StopCoroutine(nameof(ResetGlyphsAfterDelay));
-        StartCoroutine(ResetGlyphsAfterDelay(leader.cheerleader, 0.5f));
+        StartCoroutine(ResetGlyphsAfterDelay(leader.cheerleader, idx, 0.5f));
+
     }
 
-    private IEnumerator ResetGlyphsAfterDelay(CheerLeader cheer, float delay)
+    private IEnumerator ResetGlyphsAfterDelay(CheerLeader cheer, int leaderIdx, float delay)
     {
-        Debug.Log($"[RESET] Will reset glyph colors after {delay}s");
         yield return new WaitForSecondsRealtime(delay);
 
-        if (cheer.glyphA != null) cheer.glyphA.color = Color.white;
-        if (cheer.glyphB != null) cheer.glyphB.color = Color.white;
+        cheer.glyphA.color = Color.white;
+        cheer.glyphB.color = Color.white;
 
-        Debug.Log($"[RESET] Glyphs reset to white");
+        if (activeDirections.TryGetValue(leaderIdx, out var dirs))
+        {
+            cheer.glyphA.sprite = GetGlyphSprite(dirs.a);
+            cheer.glyphB.sprite = GetGlyphSprite(dirs.b);
+            activeDirections.Remove(leaderIdx);
+        }
     }
 
 

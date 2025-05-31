@@ -29,13 +29,10 @@ public class Home : MonoBehaviour
         int losses = wrapper.games.Count(g => g.played && g.won == false);
         return (wins, losses);
     }
-
-    public void Study()
-    {
-        SceneManager.LoadScene("Study");
-    }
+    
     public void Quit()
     {
+        FMODAudioManager.Instance.StopMusic();
         SceneManager.LoadScene("Main");
     }
 }

@@ -53,7 +53,7 @@ public class FivePositionsGameManager : MonoBehaviour
     private string alphabet = "abcdefghijklmnopqrstuvwxyz";
 
     private int score = 0;
-
+    private AudioSource audioSource;
     [Header("Timer Settings")]
     public GameObject timers;
     public float gameDuration = 60f;       // Total game time in seconds
@@ -75,6 +75,7 @@ public class FivePositionsGameManager : MonoBehaviour
     
     public void Initialize()
     {
+        audioSource = FMODAudioManager.Instance.GetAudioSource();
         SetMode(currentMode);
         SpawnVisuals();
         StartCoroutine(DelayedGameStart());
@@ -460,17 +461,12 @@ public class FivePositionsGameManager : MonoBehaviour
             }
 
             // Play SFX
-            if (AudioManager.Instance != null && correctClip != null) {
-                AudioManager.Instance.PlaySFX(correctClip);
-            }
+            audioSource.PlayOneShot(correctClip);
 
-            // Destroy any overlapping letters at the same x-position
             DestroyLettersOnSameX(letterObj.transform.position.x);
         } else {
             // Incorrect letter
-            if (AudioManager.Instance != null && incorrectClip != null) {
-                AudioManager.Instance.PlaySFX(incorrectClip);
-            }
+            audioSource.PlayOneShot(incorrectClip);
 
             wrongGuessCount++;
             // Apply penalty

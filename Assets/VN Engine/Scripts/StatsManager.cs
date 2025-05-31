@@ -29,7 +29,6 @@ namespace VNEngine
         // Returns 0 if the stat is not present in the dictionaries
         public static float Get_Numbered_Stat(string stat_name)
         {
-            Debug.Log("GOT: " + stat_name);
             // Check if stat_name is null or empty
             if (string.IsNullOrEmpty(stat_name))
             {

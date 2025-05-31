@@ -66,30 +66,7 @@ public class Location : MonoBehaviour
 
         // Save the updated list back to PlayerPrefsExtra
         PlayerPrefsExtra.SetList("messages", messages);
-        //        PlayerPrefs.SetString("Current Conversation", conversation);
-        if (StatsManager.Boolean_Stat_Exists("Minutes Passed"))
-        {
-            StatsManager.Add_To_Numbered_Stat("Minutes Passed", minutes);
-        }
-        else
-        {
-            StatsManager.Set_Numbered_Stat("Minutes Passed", minutes);
-        }
-
-        if(StatsManager.String_Stat_Exists("Random Encounter"))
-        {
-            if(StatsManager.Get_String_Stat("Random Encounter").Contains("None")) {
-                //already visited
-            }
-            else
-            {
-                scene = StatsManager.Get_String_Stat("Random Encounter");
-            }
-            StatsManager.Set_String_Stat("Random Encounter", "None");
-            Debug.Log("Random Encounter Activated: " + scene + " is new location.");
-
-        }
-
+        FMODAudioManager.Instance.StopMusic();
         SceneManager.LoadScene(scene);
 
     }

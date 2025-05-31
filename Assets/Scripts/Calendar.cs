@@ -5,6 +5,10 @@ using VNEngine;
 using TMPro;
 using System;
 using System.Collections.Generic;
+using UnityEngine.UI;
+using Random = System.Random;
+using FMODUnity;
+
 [Serializable]
 
 public static class FootballScheduler
@@ -196,19 +200,71 @@ public static class SemesterHelper
         return phrases[index];
     }
 }
-
+[Serializable]
+public struct TimeImage
+{
+    public SpriteRenderer image;
+    public Image uiImage;
+    public Sprite spriteDay;
+    public Sprite spriteNight;
+    public enum timeOfDay {DAY, NIGHT}
+}
 public class Calendar : MonoBehaviour
 {
+    public TimeImage[] timeImages;
     public TextMeshProUGUI month;
     public TextMeshProUGUI studyPrompt;
     public Transform calendarGrid;
     public GameObject checkmark;
     public int week;
-
+    public string ambientFMODEventName;
+    public string musicFMODEventName;
     public Location finalExamLocation;
-// Start is called before the first frame update
+    private FMOD.Studio.EventInstance bgMusic;
+
+    // Start is called before the first frame update
     void Start()
     {
+        if (UnityEngine.Random.Range(0, 1) > .5f)
+        {
+            for (int i = 0; i < timeImages.Length; i++)
+            {
+                if (timeImages[i].uiImage != null)
+                {
+                    timeImages[i].uiImage.sprite = timeImages[i].spriteDay;
+                }
+                if (timeImages[i].image != null)
+                {
+                    timeImages[i].image.sprite = timeImages[i].spriteDay;
+                }
+                
+            }
+        }
+        else
+        {
+            for (int i = 0; i < timeImages.Length; i++)
+            {
+                if (timeImages[i].image != null)
+                {
+                    timeImages[i].image.sprite = timeImages[i].spriteNight;
+                }
+                if (timeImages[i].uiImage != null)
+                {
+                    timeImages[i].uiImage.sprite = timeImages[i].spriteNight;
+                }
+
+            }
+        }
+        if (ambientFMODEventName != null)
+        {
+            FMODAudioManager.Instance.PlayMusic(ambientFMODEventName);
+        }
+
+        if (musicFMODEventName != null)
+        {
+            FMODAudioManager.Instance.PlayMusic(musicFMODEventName);
+        }
+        
         if(StatsManager.Numbered_Stat_Exists("Week"))
         {
             week = (int)StatsManager.Get_Numbered_Stat("Week");
@@ -241,7 +297,9 @@ public class Calendar : MonoBehaviour
             finalExamLocation.GoToLocation();
         }
     }
+
     
+
     // Update is called once per frame
     void Update()
     {

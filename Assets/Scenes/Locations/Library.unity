@@ -53805,6 +53805,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 931483369}
     - target: {fileID: 1611349575936783945, guid: 0991620b818a844c8872842d42ccce09, type: 3}
+      propertyPath: ambientFMODEventName
+      value: AMB_Library
+      objectReference: {fileID: 0}
+    - target: {fileID: 1611349575936783945, guid: 0991620b818a844c8872842d42ccce09, type: 3}
       propertyPath: routes.Array.data[2].stage
       value: 1
       objectReference: {fileID: 0}
@@ -165939,6 +165943,7 @@ MonoBehaviour:
   targetDefinitionText: {fileID: 1765582726106235155}
   countdownText: {fileID: 1765582726345119361}
   scoreText: {fileID: 1765582725970223903}
+  endExamConversation: {fileID: 0}
   letterPrefab: {fileID: 6571394828745395683, guid: 81a02522261f8974da19b64fbf4b047e, type: 3}
   correctClip: {fileID: 8300000, guid: 3164a6e68c3b3bb4ab02e8109bb879db, type: 3}
   incorrectClip: {fileID: 8300000, guid: 4b38b24fa5edb3343a9a58796471414f, type: 3}

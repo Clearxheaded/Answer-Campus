@@ -30908,6 +30908,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1549558761}
     - target: {fileID: -5455183261859018478, guid: 63d1a7792b05b4181a9a28f806143737, type: 3}
+      propertyPath: musicFMODEventName
+      value: MX_LectureHall
+      objectReference: {fileID: 0}
+    - target: {fileID: -5455183261859018478, guid: 63d1a7792b05b4181a9a28f806143737, type: 3}
       propertyPath: midtermConversation
       value: 
       objectReference: {fileID: 188911}
