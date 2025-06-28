@@ -20,28 +20,10 @@ public class Location : MonoBehaviour
     }
     public void GoToLocation()
     {
-  
+        int currentWeek = (int)StatsManager.Get_Numbered_Stat("Week");
+        currentWeek++;
+        StatsManager.Set_Numbered_Stat("Week", currentWeek);
         List<CharacterLocation> characterLocations = PlayerPrefsExtra.GetList<CharacterLocation>("characterLocations", new List<CharacterLocation>());
-  /*
-        int locationIndex = -1;
-  
-        for(int i = 0; i < characterLocations.Count; i++) {
-            if (characterLocations[i].location == scene)
-            {
-                locationIndex = i;
-            }
-
-        }
-        if (locationIndex > -1)
-        {
-            Debug.Log("Removing character location at index: " + locationIndex + " for scene: " + scene);
-            characterLocations.RemoveAt(locationIndex);
-        }
-        else
-        {
-            Debug.LogWarning("No matching character location found for scene: " + scene);
-        }
-*/
         PlayerPrefsExtra.SetList<CharacterLocation>("characterLocations", characterLocations);
 
         // Retrieve the messages list from PlayerPrefsExtra

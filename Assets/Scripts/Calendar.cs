@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using Random = System.Random;
 using FMODUnity;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 [Serializable]
 
@@ -221,11 +223,18 @@ public class Calendar : MonoBehaviour
     public string musicFMODEventName;
     public Location finalExamLocation;
     private FMOD.Studio.EventInstance bgMusic;
+    public Characters characters;
+    public GameObject finalReport;
+    public TextMeshProUGUI finalText;
+    public Image finalCharacterImage;
 
+    private bool isDay = true;
     // Start is called before the first frame update
-    void Start()
+
+    public void ToggleDaytime()
     {
-        if (UnityEngine.Random.Range(0, 1) > .5f)
+        isDay = !isDay;
+        if (isDay)
         {
             for (int i = 0; i < timeImages.Length; i++)
             {
@@ -233,36 +242,47 @@ public class Calendar : MonoBehaviour
                 {
                     timeImages[i].uiImage.sprite = timeImages[i].spriteDay;
                 }
+
                 if (timeImages[i].image != null)
                 {
-                    timeImages[i].image.sprite = timeImages[i].spriteDay;
+                    timeImages[0].image.sprite = timeImages[i].spriteDay;
                 }
-                
             }
         }
         else
         {
             for (int i = 0; i < timeImages.Length; i++)
             {
-                if (timeImages[i].image != null)
-                {
-                    timeImages[i].image.sprite = timeImages[i].spriteNight;
-                }
+
                 if (timeImages[i].uiImage != null)
                 {
                     timeImages[i].uiImage.sprite = timeImages[i].spriteNight;
                 }
 
+                if (timeImages[i].image != null)
+                {
+                    timeImages[i].image.sprite = timeImages[i].spriteNight;
+                }
             }
         }
+    }
+    
+    void Start()
+    {
         if (ambientFMODEventName != null)
         {
-            FMODAudioManager.Instance.PlayMusic(ambientFMODEventName);
+            if (FMODAudioManager.Instance != null)
+            {
+                FMODAudioManager.Instance.PlayMusic(ambientFMODEventName);
+            }
         }
 
         if (musicFMODEventName != null)
         {
-            FMODAudioManager.Instance.PlayMusic(musicFMODEventName);
+            if (FMODAudioManager.Instance != null)
+            {
+                FMODAudioManager.Instance.PlayMusic(musicFMODEventName);
+            }
         }
         
         if(StatsManager.Numbered_Stat_Exists("Week"))
@@ -296,8 +316,87 @@ public class Calendar : MonoBehaviour
         {
             finalExamLocation.GoToLocation();
         }
+
+        if (week >= SemesterHelper.FinalsWeek + 1)
+        {
+            EndSemester();
+        }
     }
 
+    public static Character ParseBestFriendEnum(string rawValue)
+    {
+        // Normalize: lowercase, remove non-alphanumeric characters, then PascalCase it
+        string cleaned = Regex.Replace(rawValue, @"[^a-zA-Z0-9]", ""); // Remove symbols
+        cleaned = char.ToUpper(cleaned[0]) + cleaned.Substring(1).ToLower(); // Simple PascalCase
+
+        if (Enum.TryParse(typeof(Character), cleaned, out var result))
+        {
+            return (Character)result;
+        }
+
+        Debug.LogWarning($"Could not parse '{rawValue}' into Character enum. Defaulting.");
+        return Character.NONE; // Replace with a safe default in your enum
+    }
+
+    void EndSemester()
+    {
+        string bestFriendRaw = StatsManager.Get_String_Stat("Best Friend");
+        Character bestFriendEnum = ParseBestFriendEnum(bestFriendRaw);
+        foreach (var profile in characters.profiles)
+        {
+            if (profile.character == bestFriendEnum)
+            {
+                finalCharacterImage.sprite = profile.polaroid;
+            }
+        }
+        string json = StatsManager.Get_String_Stat("FootballSchedule");
+        string player_name = StatsManager.Get_String_Stat("Player Name");
+        var schedule = JsonUtility.FromJson<FootballGameListWrapper>(json);
+        int wins = schedule.games.Count(g => g.played && g.won);
+        int losses = schedule.games.Count(g => g.played && !g.won);
+        float midtermScore = StatsManager.Get_Numbered_Stat("MidtermScore");
+        float finalScore = StatsManager.Get_Numbered_Stat("FinalScore");
+        float studyBonus = StatsManager.Get_Numbered_Stat("StudyGameScore"); // number of words
+// Calculate final GPA
+        float examScore = Mathf.Max(midtermScore, finalScore);
+        float gpa = examScore; // base GPA
+        if (studyBonus > 0) gpa += 0.5f; // bonus bump for studying
+        gpa = Mathf.Clamp(gpa, 0f, 4f);
+        string finalNarrative = $"{player_name}! Can you believe the semester is over already? You've been an incredible friend. ";
+/*
+        if (gpa > 3.5f)
+        {
+            finalNarrative += $"You crushed it this semester, {gpa} GPA? Legend. ";
+            if (wins > losses)
+            {
+                finalNarrative += $"And how about our team? I mean, they're talented but you brought the spirit. ";
+            }
+            else
+            {
+                finalNarrative += "But maybe find some time to work on that school spirit, our team could use it! ";
+            }
+
+        }
+        else
+        {
+            finalNarrative += $"Don't worry about grades too much, {gpa} is still passing, right? ";
+            if (wins > losses)
+            {
+                if (wins > losses)
+                {
+                    finalNarrative += $"You did crush it with team spirit. The coach owes you! ";
+                }
+                else
+                {
+                    finalNarrative += "And who cares about team spirit anyways? I'd rather go to the club. ";
+                }
+            }
+        }
+*/
+        finalNarrative += "Can't wait to see what next semester brings.";
+        finalText.text = finalNarrative;
+        finalReport.SetActive(true);
+    }
     
 
     // Update is called once per frame

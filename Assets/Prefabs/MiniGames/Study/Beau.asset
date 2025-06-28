@@ -17,7 +17,7 @@ MonoBehaviour:
   timerDuration: 60
   showTimer: 0
   minSpawnInterval: 2
-  maxSpawnInterval: 5
+  maxSpawnInterval: 3
   chanceOfCorrectLetter: 0.5
   allowHints: 0
   customQuestions: []

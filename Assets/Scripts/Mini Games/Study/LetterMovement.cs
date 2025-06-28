@@ -30,7 +30,7 @@ public class LetterMovement : MonoBehaviour {
         this.letterChar = letterChar;
         this.targetPos = targetPos;
         this.moveSpeed = moveSpeed;
-        audioSource = FMODAudioManager.Instance.GetAudioSource();
+//        audioSource = FMODAudioManager.Instance.GetAudioSource();
     }
 
     private void Update() {
@@ -54,7 +54,7 @@ public class LetterMovement : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("EraserCollider")) {
             manager.UnregisterActiveColumn(boxIndex);
-            audioSource.PlayOneShot(eraserClip);
+//            audioSource.PlayOneShot(eraserClip);
             Destroy(gameObject);
         }
     }

@@ -14,6 +14,7 @@ public struct CharacterLocation
 public class Characters : MonoBehaviour
 {
     public ProfilePicture[] profiles;
+
     // Start is called before the first frame update
     void Start()
     {

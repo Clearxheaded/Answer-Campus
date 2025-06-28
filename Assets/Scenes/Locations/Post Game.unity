@@ -1308,7 +1308,7 @@ MonoBehaviour:
   cutScene: {fileID: 783001821}
   display: {fileID: 587955151}
   sentences:
-  - Walking to the Shuttle
+  - 
   timeBetweenSentences: 3
   exterior: {fileID: 1634487560}
   dialogueManager: {fileID: 1685292402}

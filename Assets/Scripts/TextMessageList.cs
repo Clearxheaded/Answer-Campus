@@ -13,6 +13,8 @@ public struct ProfilePicture
 {
     public Character character;
     public Sprite picture;
+    public Sprite polaroid;
+
 }
 
 public class TextMessageList : MonoBehaviour

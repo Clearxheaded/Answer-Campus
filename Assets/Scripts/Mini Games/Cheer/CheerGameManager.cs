@@ -134,7 +134,7 @@ public class CheerGameManager : MonoBehaviour
         FootballGame game = FootballScheduler.GetThisWeeksGame(currentWeek);
         FMODAudioManager.Instance.PlayMusic(crowd);
 
-        /*
+        
         if (game != null && game.isHome && !game.played)
         {
             // Trigger cheer mini-game
@@ -151,7 +151,7 @@ public class CheerGameManager : MonoBehaviour
         return;
             
         }
-        */
+        
         StartCoroutine(GameFlowRoutine());
     }
 
@@ -170,7 +170,7 @@ public class CheerGameManager : MonoBehaviour
             playableGameRoot.SetActive(false);
             if (introClip != null)
             {
-                audioSource.PlayOneShot(introClip);
+                //audioSource.PlayOneShot(introClip);
                 yield return new WaitForSeconds(introClip.length);
             }
             playableGameRoot.SetActive(true);

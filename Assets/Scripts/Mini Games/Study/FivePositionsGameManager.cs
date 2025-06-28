@@ -75,7 +75,7 @@ public class FivePositionsGameManager : MonoBehaviour
     
     public void Initialize()
     {
-        audioSource = FMODAudioManager.Instance.GetAudioSource();
+//        audioSource = FMODAudioManager.Instance.GetAudioSource();
         SetMode(currentMode);
         SpawnVisuals();
         StartCoroutine(DelayedGameStart());
@@ -213,7 +213,9 @@ public class FivePositionsGameManager : MonoBehaviour
 
                     }
                 }
-                else if (currentMode == GameMode.Group || currentMode == GameMode.Exam)
+            }
+            else {
+                if (currentMode == GameMode.Group || currentMode == GameMode.Exam)
                 {
                     if (AllBoxesFilled() || wrongGuessCount >= maxWrongGuesses)
                     {
@@ -393,6 +395,10 @@ public class FivePositionsGameManager : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            Debug.LogWarning($"Invalid question selected. Length is {question.answer.Length}");
+        }
     }
 
     public void ConfigureChallenge(ChallengeProfile profile)
@@ -461,12 +467,12 @@ public class FivePositionsGameManager : MonoBehaviour
             }
 
             // Play SFX
-            audioSource.PlayOneShot(correctClip);
+//            audioSource.PlayOneShot(correctClip);
 
             DestroyLettersOnSameX(letterObj.transform.position.x);
         } else {
             // Incorrect letter
-            audioSource.PlayOneShot(incorrectClip);
+//            audioSource.PlayOneShot(incorrectClip);
 
             wrongGuessCount++;
             // Apply penalty
@@ -584,8 +590,9 @@ public class FivePositionsGameManager : MonoBehaviour
     /// </summary>
     private IEnumerator EndGame()
     {
+        Debug.Log("GAME END TRIGGERED");
+        Debug.Log($"Boxes Filled: {AllBoxesFilled()} Wrong Guess: {wrongGuessCount} Max Wrong {maxWrongGuesses} Time Left: {timeLeft}");
         gameIsOver = true;
-
         if (spawnRoutine != null)
             StopCoroutine(spawnRoutine);
         spawnRoutine = null;
@@ -611,7 +618,7 @@ public class FivePositionsGameManager : MonoBehaviour
         }
         else
         {
-            targetDefinitionText.text = $"Session Complete. You reviewed {score} word{(score == 1 ? "" : "s")}.";
+            targetDefinitionText.text = $"Studied {score} word{(score == 1 ? "" : "s")}.";
             yield return new WaitForSeconds(5f);
         }
 

@@ -21,9 +21,14 @@ namespace VNEngine
         public string characterMODEventName;
         public List<StageConversation> routes;
         public List<ConversationManager> fallbackConversations;
-        public ConversationManager repeatableFallback; 
-        public override void Run_Node()
+        public ConversationManager repeatableFallback;
+        private bool hasAudioManager = false;
+public override void Run_Node()
 {
+    if (FMODAudioManager.Instance == null)
+    {
+        gameObject.AddComponent<FMODAudioManager>();
+    }
     List<CharacterLocation> characterLocations = PlayerPrefsExtra.GetList<CharacterLocation>("characterLocations", new List<CharacterLocation>());
     CharacterLocation? selected = null;
 

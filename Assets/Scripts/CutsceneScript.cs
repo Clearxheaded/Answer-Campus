@@ -1,9 +1,9 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+using FMODUnity;
+using FMOD.Studio;
 
 public class CutsceneScript : MonoBehaviour
 {
@@ -16,102 +16,107 @@ public class CutsceneScript : MonoBehaviour
     public GameObject dialogueManager;
     public GameObject story;
 
-    private float nextSentenceTime;
-    private int sentenceIndex = 0;
-    private int loadSequence = 0;
+    public bool skip = false;
 
-    // Start is called before the first frame update
+    private int sentenceIndex = 0;
+    private bool cutsceneEnded = false;
+
+    private Coroutine cutsceneRoutine;
+
+    private EventInstance fmodEvent;
+
     void Start()
     {
-        loadSequence = 0;
-        if(sentences.Length > 0)
+        if (sentences.Length > 0)
         {
-            Debug.Log("Setting first text");
+            display.text = sentences[0];
+        }
+
+        // Start FMOD audio if needed
+        //fmodEvent = RuntimeManager.CreateInstance("event:/YourCutsceneTrack"); // Replace with your FMOD event
+        //fmodEvent.start();
+
+        cutsceneRoutine = StartCoroutine(RunCutscene());
+    }
+
+    void Update()
+    {
+        if (skip && !cutsceneEnded)
+        {
+            StopCoroutine(cutsceneRoutine);
+            StartCoroutine(SkipToEnd());
+        }
+    }
+
+    IEnumerator RunCutscene()
+    {
+        for (sentenceIndex = 1; sentenceIndex < sentences.Length; sentenceIndex++)
+        {
+            yield return new WaitForSeconds(timeBetweenSentences);
             display.text = sentences[sentenceIndex];
         }
 
-        nextSentenceTime = Time.time + timeBetweenSentences;
-        sentenceIndex++;
+        yield return new WaitForSeconds(timeBetweenSentences);
+        StartCoroutine(EndCutscene());
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator SkipToEnd()
     {
-        if (nextSentenceTime <= Time.time && loadSequence == 0)
+        cutsceneEnded = true;
+
+        display.gameObject.SetActive(false);
+        exterior.SetActive(true);
+
+        yield return new WaitUntil(() =>
         {
+            var img = exterior.GetComponent<Image>();
+            return img == null || img.color == Color.black;
+        });
 
-            nextSentenceTime = Time.time + timeBetweenSentences;
-            if(sentenceIndex < sentences.Length)
-            {
-                display.text = sentences[sentenceIndex];
-            }
-
-            sentenceIndex++;
-        }
-        //go over by one to gain another timer on the last item
-        if (sentences.Length < sentenceIndex)
-        {
-            loadSequence = 1;
-        }
-
-        if(loadSequence == 1)
-        {
-            display.gameObject.SetActive(false);
-            exterior.SetActive(true);
-            loadSequence = 2;
-        }
-
-        if(loadSequence == 2)
-        {
-            if(exterior.GetComponent<Image>())
-            {
-                if (exterior.GetComponent<Image>().color == Color.black)
-                {
-                    loadSequence = 3;
-                }
-
-            }
-            else
-            {
-                Debug.Log("No image found, moving to next sequence...");
-                loadSequence = 3;
-            }
-
-        }
-
-        if(loadSequence == 3)
-        {
-            if(cutScene.GetComponent<FadeOutAudioSource>())
-            {
-                AudioSource cameraAudio = cutScene.GetComponent<FadeOutAudioSource>().GetAudioSource();
-                cutScene.SetActive(false);
-                //Get camera's MonoBehaviour
-                MonoBehaviour camMono = Camera.main.GetComponent<MonoBehaviour>();
-                //Use it to start your coroutine function
-                camMono.StartCoroutine(FadeAudioSource.StartFade(cameraAudio, 1f, 0));
-
-            }
-            dialogueManager.SetActive(true);
-            story.SetActive(true);
-        }
-
+        //StartCoroutine(FadeOutFMOD());
+        EndSequence();
     }
 
-
-}
-
-public static class FadeAudioSource
-{
-    public static IEnumerator StartFade(AudioSource audioSource, float duration, float targetVolume)
+    IEnumerator EndCutscene()
     {
-        float currentTime = 0;
-        float start = audioSource.volume;
+        display.gameObject.SetActive(false);
+        exterior.SetActive(true);
+
+        yield return new WaitUntil(() =>
+        {
+            var img = exterior.GetComponent<Image>();
+            return img == null || img.color == Color.black;
+        });
+
+//        StartCoroutine(FadeOutFMOD());
+        EndSequence();
+    }
+
+    void EndSequence()
+    {
+        cutScene.SetActive(false);
+        dialogueManager.SetActive(true);
+        story.SetActive(true);
+        cutsceneEnded = true;
+    }
+
+    IEnumerator FadeOutFMOD()
+    {
+        float duration = 1f;
+        float currentTime = 0f;
+        float startVolume;
+
+        fmodEvent.getVolume(out startVolume);
+
         while (currentTime < duration)
         {
             currentTime += Time.deltaTime;
-            audioSource.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);
+            float newVolume = Mathf.Lerp(startVolume, 0, currentTime / duration);
+            fmodEvent.setVolume(newVolume);
             yield return null;
         }
-        yield break;
+
+        fmodEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        fmodEvent.release();
     }
 }

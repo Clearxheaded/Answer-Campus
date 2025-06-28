@@ -30152,7 +30152,7 @@ MonoBehaviour:
         m_CallState: 2
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 282285652}
+      - m_Target: {fileID: 814047031}
         m_TargetAssemblyTypeName: VNEngine.ConversationManager, Assembly-CSharp
         m_MethodName: Start_Conversation
         m_Mode: 1
@@ -68409,7 +68409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroy_when_finished: 0
-  start_conversation_when_done: {fileID: 0}
+  start_conversation_when_done: {fileID: 814047031}
   cur_node: 0
   active: 0
   finished_conversation: 0
@@ -98384,6 +98384,7 @@ MonoBehaviour:
   exterior: {fileID: 1634487560}
   dialogueManager: {fileID: 1685292402}
   story: {fileID: 561909550}
+  skip: 0
 --- !u!1 &1256092709
 GameObject:
   m_ObjectHideFlags: 0
@@ -165955,7 +165956,7 @@ MonoBehaviour:
   minSpawnInterval: 10
   maxSpawnInterval: 20
   chanceOfCorrectLetter: 0.3
-  letterSpeed: 40
+  letterSpeed: 80
   timers: {fileID: 1765582727319325714}
   gameDuration: 60
   timerText: {fileID: 1765582726512048834}
