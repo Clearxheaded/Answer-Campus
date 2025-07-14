@@ -24752,7 +24752,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: Give it a shot!
+  text: 'I''ll add you now. Then I can send you invites and updates. '
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1
