@@ -55,7 +55,7 @@ public class StudyQuestionLoader : MonoBehaviour
         Debug.LogWarning("No questions for this week. Falling back to week 1.");
         currentQuestions = weekList.weeks.Find(w => w.week == "1")?.questions;
     }
-    
+
     public string GetDisplayPrompt(QuestionAnswerPair pair, bool definitions)
     {
         if (definitions)
@@ -66,6 +66,33 @@ public class StudyQuestionLoader : MonoBehaviour
         return pair.question;
     }
 
+    // public QuestionAnswerPair GetRandomQuestion()
+    // {
+    //     if (currentQuestions == null || currentQuestions.Count == 0)
+    //     {
+    //         Debug.LogWarning("No questions loaded for current week.");
+    //         return null;
+    //     }
+
+    //     if (currentQuestions.Count == 1)
+    //     {
+    //         lastQuestion = currentQuestions[0];
+    //         return lastQuestion;
+    //     }
+
+    //     QuestionAnswerPair selected;
+    //     int safety = 0;
+    //     do
+    //     {
+    //         selected = currentQuestions[Random.Range(0, currentQuestions.Count)];
+    //         safety++;
+    //     }
+    //     while (selected == lastQuestion && safety < 10);
+
+    //     lastQuestion = selected;
+    //     return selected;
+    // }
+    
     public QuestionAnswerPair GetRandomQuestion()
     {
         if (currentQuestions == null || currentQuestions.Count == 0)
@@ -74,22 +101,29 @@ public class StudyQuestionLoader : MonoBehaviour
             return null;
         }
 
-        if (currentQuestions.Count == 1)
+        // Filter for unused questions
+        var unusedQuestions = currentQuestions.FindAll(q => !q.alreadyUsed);
+
+        if (unusedQuestions.Count == 0)
         {
-            lastQuestion = currentQuestions[0];
-            return lastQuestion;
+            Debug.Log("All questions used — resetting all.");
+            foreach (var q in currentQuestions)
+                q.alreadyUsed = false;
+            unusedQuestions = new List<QuestionAnswerPair>(currentQuestions);
         }
 
         QuestionAnswerPair selected;
         int safety = 0;
         do
         {
-            selected = currentQuestions[Random.Range(0, currentQuestions.Count)];
+            selected = unusedQuestions[Random.Range(0, unusedQuestions.Count)];
             safety++;
         }
-        while (selected == lastQuestion && safety < 10);
+        while (selected == lastQuestion && unusedQuestions.Count > 1 && safety < 10);
 
+        selected.alreadyUsed = true;
         lastQuestion = selected;
         return selected;
     }
+
 }

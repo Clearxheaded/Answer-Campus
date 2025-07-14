@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 using VNEngine;
 
 [System.Serializable]
-public class QuestionAnswerPair {
+public class QuestionAnswerPair
+{
     public string question;
     public string definition;
     public string answer; // Must be 5 letters
+    public bool alreadyUsed = false;
 }
 
 public class FivePositionsGameManager : MonoBehaviour
@@ -56,21 +58,21 @@ public class FivePositionsGameManager : MonoBehaviour
     private AudioSource audioSource;
     [Header("Timer Settings")]
     public GameObject timers;
-    public float gameDuration = 60f;       // Total game time in seconds
+    public float gameDuration = 180f;       // Total game time in seconds
     public TextMeshProUGUI timerText;      // Displays remaining time
     public TextMeshProUGUI penaltyText;    // Briefly shows "-0:20" or similar
-    public float penaltyTime = 20f;        // Seconds to remove on incorrect answer
+    public float penaltyTime = 5f;        // Seconds to remove on incorrect answer
     public GameObject studyGameParent;       // Panel to show when time runs out
     [SerializeField] private GameObject gameStuff;
     public TextMeshProUGUI finalScoreText; // Display final score on game over panel
     private GameObject eraser;
-    private float timeLeft;
+    public float timeLeft;
     private bool gameIsOver = false;
     private Coroutine spawnRoutine;
-    private int wrongGuessCount = 0;
+    public int wrongGuessCount = 0;
     // This bool will pause the timer when true
     private bool isTimerPaused = false;
-    private List<int> activeColumns = new List<int>();
+    public List<int> activeColumns = new List<int>();
     private List<GameObject> boxVisuals = new List<GameObject>();
     
     public void Initialize()
@@ -293,8 +295,8 @@ public class FivePositionsGameManager : MonoBehaviour
 
                 if (!waitingForDelivery)
                 {
-                    // Nothing left to do — either all filled or all blocked with no letters en route
-                    yield break;
+                    yield return new WaitForSeconds(0.5f);
+                    continue; // instead of yield break
                 }
 
                 yield return null;
@@ -408,7 +410,8 @@ public class FivePositionsGameManager : MonoBehaviour
         maxSpawnInterval = profile.maxSpawnInterval;
         chanceOfCorrectLetter = profile.chanceOfCorrectLetter;
 
-        timers.SetActive(profile.showTimer);
+        // timers.SetActive(profile.showTimer);
+        timers.SetActive(true);
 
         // Decide whether we're using definitions or questions
         bool useDefinitions = profile.promptType == ChallengeProfile.PromptType.Definitions;
@@ -438,9 +441,12 @@ public class FivePositionsGameManager : MonoBehaviour
         }
     }
     private bool AllBoxesFilled() {
+        int filledCount = 0;
         foreach (bool filled in boxFilled) {
             if (!filled) return false;
+            filledCount++;
         }
+        Debug.Log($"Boxes filled: {filledCount}/5");
         return true;
     }
 
@@ -531,8 +537,8 @@ public class FivePositionsGameManager : MonoBehaviour
     /// </summary>
     private IEnumerator RestartGameRoutine() {
         //half the time between spawns
-        minSpawnInterval *= .5f;
-        maxSpawnInterval *= .5f;
+        minSpawnInterval = Mathf.Max(minSpawnInterval * 0.9f, 0.3f); // limit how fast it gets
+        maxSpawnInterval = Mathf.Max(maxSpawnInterval * 0.9f, 1f);
         // Wait briefly so the player can see the filled boxes
         yield return new WaitForSeconds(2f);
 
@@ -620,6 +626,12 @@ public class FivePositionsGameManager : MonoBehaviour
         {
             targetDefinitionText.text = $"Studied {score} word{(score == 1 ? "" : "s")}.";
             yield return new WaitForSeconds(5f);
+        }
+
+        if (questionLoader != null && questionLoader.currentQuestions != null)
+        {
+            foreach (var q in questionLoader.currentQuestions)
+                q.alreadyUsed = false;
         }
 
         studyGameParent.SetActive(false);

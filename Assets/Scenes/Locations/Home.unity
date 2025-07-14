@@ -13442,7 +13442,7 @@ MonoBehaviour:
   currentMode: 0
   useTimer: 1
   spawnMode: 1
-  maxWrongGuesses: 3
+  maxWrongGuesses: 6
   possibleWords:
   - word: flame
     definition: The visible, glowing part of a fire.
@@ -13490,13 +13490,16 @@ MonoBehaviour:
   chanceOfCorrectLetter: 0.409
   letterSpeed: 80
   timers: {fileID: 5840799739197707037}
-  gameDuration: 60
+  gameDuration: 180
   timerText: {fileID: 5840799739467867597}
   penaltyText: {fileID: 5840799740231256403}
-  penaltyTime: 20
+  penaltyTime: 5
   studyGameParent: {fileID: 5840799740347882504}
   gameStuff: {fileID: 5840799738567129558}
   finalScoreText: {fileID: 5840799739095192232}
+  timeLeft: 0
+  wrongGuessCount: 0
+  activeColumns: 
 --- !u!1 &5840799739500277242
 GameObject:
   m_ObjectHideFlags: 0
