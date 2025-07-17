@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -86091,6 +86090,7 @@ MonoBehaviour:
   exterior: {fileID: 1634487560}
   dialogueManager: {fileID: 1685292402}
   story: {fileID: 561909550}
+  skip: 0
 --- !u!1001 &1255149854
 PrefabInstance:
   m_ObjectHideFlags: 0
