@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using FMOD.Studio;
 using FMODUnity;
 
 
@@ -23,11 +24,25 @@ namespace VNEngine
         public List<ConversationManager> fallbackConversations;
         public ConversationManager repeatableFallback;
         private bool hasAudioManager = false;
+        private EventInstance musicFMODEvent;
+        private EventInstance ambientFMODEvent;
 public override void Run_Node()
 {
-    if (FMODAudioManager.Instance == null)
+    musicFMODEvent = FMODAudioManager.Instance.currentMusic;
+    ambientFMODEvent = FMODAudioManager.Instance.currentAmbient;
+
+    if (!string.IsNullOrEmpty(musicFMODEventName))
     {
-        gameObject.AddComponent<FMODAudioManager>();
+        FMODAudioManager.Instance.PlayMusic(musicFMODEventName);
+    }
+    else
+    {
+        FMODAudioManager.Instance.StopMusic();
+    }
+
+    if (!string.IsNullOrEmpty(ambientFMODEventName))
+    {
+        FMODAudioManager.Instance.PlayAmbient(ambientFMODEventName);
     }
     List<CharacterLocation> characterLocations = PlayerPrefsExtra.GetList<CharacterLocation>("characterLocations", new List<CharacterLocation>());
     CharacterLocation? selected = null;
@@ -53,20 +68,17 @@ public override void Run_Node()
             if (route.character == loc.character && route.stage == stage)
             {
                 Debug.Log($"Routing {loc.character} at stage {stage} to conversation: {route.conversation.name}");
-                if (ambientFMODEventName != null)
-                {
-                    FMODAudioManager.Instance.PlayMusic(ambientFMODEventName);
-                }
 
-                if (musicFMODEventName != null)
-                {
-                    FMODAudioManager.Instance.PlayMusic(musicFMODEventName);
-                }
-
-                if (characterMODEventName != null)
-                {
-                    FMODAudioManager.Instance.PlayMusic(characterMODEventName);
-                }
+           
+                // Set the parameter dynamically
+                if (loc.character == Character.CHARLI)
+                    FMODAudioManager.Instance.SetDrums(0);
+                else if (loc.character == Character.LEILANI)
+                    FMODAudioManager.Instance.SetDrums(1);
+                else if (loc.character == Character.DEEPAK)
+                    FMODAudioManager.Instance.SetDrums(2);
+                else
+                    FMODAudioManager.Instance.SetDrums(3);
 
                 route.conversation.Start_Conversation();
                 Finish_Node();
@@ -87,21 +99,6 @@ public override void Run_Node()
         {
             Debug.Log($"Routing unseen fallback {i}: {fallback.name}");
             StatsManager.Set_Boolean_Stat(fallbackKey, true);
-            if (ambientFMODEventName != null)
-            {
-                FMODAudioManager.Instance.PlayMusic(ambientFMODEventName);
-            }
-
-            if (musicFMODEventName != null)
-            {
-                FMODAudioManager.Instance.PlayMusic(musicFMODEventName);
-            }
-
-            if (characterMODEventName != null)
-            {
-                FMODAudioManager.Instance.PlayMusic(characterMODEventName);
-            }
-
             fallback.Start_Conversation();
             go_to_next_node = false;
             Finish_Node();
@@ -113,21 +110,6 @@ public override void Run_Node()
     if (repeatableFallback != null)
     {
         Debug.Log($"All fallbacks seen. Routing to repeatable fallback: {repeatableFallback.name}");
-        if (ambientFMODEventName != null)
-        {
-            FMODAudioManager.Instance.PlayMusic(ambientFMODEventName);
-        }
-
-        if (musicFMODEventName != null)
-        {
-            FMODAudioManager.Instance.PlayMusic(musicFMODEventName);
-        }
-
-        if (characterMODEventName != null)
-        {
-            FMODAudioManager.Instance.PlayMusic(characterMODEventName);
-        }
-
         repeatableFallback.Start_Conversation();
         go_to_next_node = false;
         Finish_Node();

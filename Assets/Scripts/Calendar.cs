@@ -222,7 +222,6 @@ public class Calendar : MonoBehaviour
     public string ambientFMODEventName;
     public string musicFMODEventName;
     public Location finalExamLocation;
-    private FMOD.Studio.EventInstance bgMusic;
     public Characters characters;
     public GameObject finalReport;
     public TextMeshProUGUI finalText;
@@ -273,7 +272,7 @@ public class Calendar : MonoBehaviour
         {
             if (FMODAudioManager.Instance != null)
             {
-                FMODAudioManager.Instance.PlayMusic(ambientFMODEventName);
+                FMODAudioManager.Instance.PlayAmbient(ambientFMODEventName);
             }
         }
 
@@ -284,7 +283,8 @@ public class Calendar : MonoBehaviour
                 FMODAudioManager.Instance.PlayMusic(musicFMODEventName);
             }
         }
-        
+        FMODAudioManager.Instance.PrintActiveMusicInstances();
+
         if(StatsManager.Numbered_Stat_Exists("Week"))
         {
             week = (int)StatsManager.Get_Numbered_Stat("Week");

@@ -15,6 +15,8 @@ namespace VNEngine
 
         public override void Run_Node()
         {
+            FMODAudioManager.Instance.FadeOutAmbient(0);
+            FMODAudioManager.Instance.FadeOutMusic(0);
             // Simply loads the specified scene
             Debug.Log("Switching level: " + level_to_load + " after playing cutscene...");
             PlayerPrefs.SetString("Scene After Save", level_to_load);

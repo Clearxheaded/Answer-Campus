@@ -755,11 +755,13 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../../../Downloads/AnswerCampus_MusicSound-20250711T174621Z-1-001/AnswerCampus_MusicSound/AnswerCampus_MusicSound.fspro
-  sourceBankPath: ../../../Downloads/AnswerCampus_MusicSound-20250711T174621Z-1-001/AnswerCampus_MusicSound/Build
+  sourceProjectPath: ../../../Library/CloudStorage/GoogleDrive-c.ewing@miami.edu/Shared
+    drives/NERDLab/Games/Answer Campus/Music/FMOD Projects/AnswerCampus_MusicSound/AnswerCampus_MusicSound.fspro
+  sourceBankPath: ../../../Library/CloudStorage/GoogleDrive-c.ewing@miami.edu/Shared
+    drives/NERDLab/Games/Answer Campus/Music/FMOD Projects/AnswerCampus_MusicSound/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
-  ShowBankRefreshWindow: 1
+  ShowBankRefreshWindow: 0
   AutomaticEventLoading: 1
   BankLoadType: 0
   AutomaticSampleLoading: 1

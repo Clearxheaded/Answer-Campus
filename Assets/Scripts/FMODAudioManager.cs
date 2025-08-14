@@ -1,16 +1,145 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
-using Debug = FMOD.Debug;
+//using Debug = FMOD.Debug;
 using STOP_MODE = FMOD.Studio.STOP_MODE;
 
 public class FMODAudioManager : MonoBehaviour
 {
     public static FMODAudioManager Instance { get; private set; }
-    private EventInstance bgMusic;
     private string currentEventPath = "";
     private AudioSource audioSource;
+    public FMOD.Studio.EventInstance currentMusic;
+    public FMOD.Studio.EventInstance currentAmbient;
+
+    private Coroutine currentFadeOut;
+    private EventInstance nextMusicToPlay;
+
+    private Coroutine currentMusicCoroutine;
+    private List<EventInstance> allCreatedInstances = new();
+
+
+    public void PrintActiveMusicInstances()
+    {
+        Debug.Log("----- Active FMOD Music Instances -----");
+        foreach (var instance in allCreatedInstances)
+        {
+            if (instance.isValid())
+            {
+                instance.getDescription(out var desc);
+                desc.getPath(out string path);
+                instance.getPlaybackState(out var state);
+                Debug.Log($"Playing: {path}, State: {state}");
+            }
+        }
+    }
+
+    public void PlayMusic(string eventName, float fadeDuration = 1f)
+    {
+        if (currentMusicCoroutine != null)
+            StopCoroutine(currentMusicCoroutine);
+
+        currentMusicCoroutine = StartCoroutine(TransitionToNewMusic(eventName, fadeDuration));
+    }
+
+    private IEnumerator TransitionToNewMusic(string newEventName, float fadeDuration)
+    {
+        // Fade out current music
+        if (currentMusic.isValid())
+        {
+            currentMusic.getVolume(out float startVolume);
+            float timer = 0f;
+
+            while (timer < fadeDuration)
+            {
+                timer += Time.deltaTime;
+                float volume = Mathf.Lerp(startVolume, 0, timer / fadeDuration);
+                currentMusic.setVolume(volume);
+                yield return null;
+            }
+
+            currentMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            currentMusic.release();
+        }
+
+        // Now start new music
+        currentMusic = FMODUnity.RuntimeManager.CreateInstance(newEventName);
+        allCreatedInstances.Add(currentMusic);
+        currentMusic.setVolume(1f);
+        currentMusic.start();
+    }
+
+
+    private IEnumerator FadeOutAndReplace(EventInstance oldMusic, EventInstance newMusic, float duration)
+    {
+        float timer = 0f;
+        oldMusic.getVolume(out float startVolume);
+
+        while (timer < duration)
+        {
+            timer += Time.deltaTime;
+            float newVol = Mathf.Lerp(startVolume, 0, timer / duration);
+            oldMusic.setVolume(newVol);
+            yield return null;
+        }
+
+        oldMusic.stop(STOP_MODE.ALLOWFADEOUT);
+        oldMusic.release();
+
+        currentMusic = newMusic;
+        currentMusic.start();
+
+        currentFadeOut = null;
+        nextMusicToPlay.clearHandle();
+    }
+
+    public void PlayAmbient(string eventName)
+    {
+        if (currentAmbient.isValid())
+        {
+            currentAmbient.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            currentAmbient.release();
+        }
+        currentAmbient = FMODUnity.RuntimeManager.CreateInstance(eventName);
+        currentAmbient.start();
+        allCreatedInstances.Add(currentAmbient);
+    }
+
+    public void FadeOutMusic(float duration)
+    {
+        if (currentMusic.isValid())
+        {
+            StartCoroutine(FadeOutAndStop(currentMusic, duration));
+        }
+    }
+
+    public void FadeOutAmbient(float duration)
+    {
+        if (currentAmbient.isValid())
+        {
+            StartCoroutine(FadeOutAndStop(currentAmbient, duration));
+        }
+    }
+    private IEnumerator FadeOutAndStop(FMOD.Studio.EventInstance instance, float duration)
+    {
+        float timer = 0f;
+        instance.getVolume(out float startVolume);
+
+        while (timer < duration)
+        {
+            timer += Time.deltaTime;
+            float newVol = Mathf.Lerp(startVolume, 0, timer / duration);
+            instance.setVolume(newVol);
+            yield return null;
+        }
+
+        instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        Debug.Log($"Releasing instance {instance}");
+        instance.release();
+    }
+
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -34,6 +163,12 @@ public class FMODAudioManager : MonoBehaviour
             }
         }
         return audioSource;
+    }
+
+    public void SetDrums(int drumSet)
+    {
+        currentMusic.setParameterByName("CharacterDrumSelection", drumSet);
+
     }
     /// <summary>
     /// Plays a one-shot event, optionally setting a parameter before playback.
@@ -74,58 +209,19 @@ public class FMODAudioManager : MonoBehaviour
         }
         while (state != FMOD.Studio.PLAYBACK_STATE.STOPPED);
     }
-
-    public void PlayMusic(string eventPath)
-    {
-        if(eventPath == "") return;
-        eventPath = ($"event:/{eventPath}");
-        if (currentEventPath == eventPath) return; // Already playing
-        StopMusic(); // stop existing music if any
-
-        currentEventPath = eventPath;
-        bgMusic = RuntimeManager.CreateInstance(currentEventPath);
-        bgMusic.start();
-    }
-
+    
     public void StopMusic(bool allowFadeOut = true)
     {
-        if (bgMusic.isValid())
+        if (currentMusic.isValid())
         {
-            bgMusic.stop(allowFadeOut ? STOP_MODE.ALLOWFADEOUT : STOP_MODE.IMMEDIATE);
-            bgMusic.release();
+            currentMusic.stop(allowFadeOut ? STOP_MODE.ALLOWFADEOUT : STOP_MODE.IMMEDIATE);
+            currentMusic.release();
         }
 
         currentEventPath = "";
     }
 
-    public void SetMusicParameter(string paramName, float value)
-    {
-        if (bgMusic.isValid())
-        {
-            bgMusic.setParameterByName(paramName, value);
-        }
-    }
 
-    public void SetMusicVolume(float volume)
-    {
-        if (bgMusic.isValid())
-        {
-            bgMusic.setVolume(volume);
-        }
-    }
-
-    public bool IsPlaying()
-    {
-        if (!bgMusic.isValid()) return false;
-
-        bgMusic.getPlaybackState(out PLAYBACK_STATE state);
-        return state == PLAYBACK_STATE.PLAYING;
-    }
-    
-    /// <summary>
-    /// Plays a single sound effect (OneShot).
-    /// </summary>
-    /// <param name="clip">Clip to play</param>
 
 }
 

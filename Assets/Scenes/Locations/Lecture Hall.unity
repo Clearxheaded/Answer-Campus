@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10309,6 +10308,68 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
+--- !u!1001 &138155092
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1231348334}
+    m_Modifications:
+    - target: {fileID: 160300, guid: 02fa0947d6da04082ae770693640dc11, type: 3}
+      propertyPath: m_Name
+      value: Fade Out Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 424250, guid: 02fa0947d6da04082ae770693640dc11, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424250, guid: 02fa0947d6da04082ae770693640dc11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424250, guid: 02fa0947d6da04082ae770693640dc11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424250, guid: 02fa0947d6da04082ae770693640dc11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424250, guid: 02fa0947d6da04082ae770693640dc11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424250, guid: 02fa0947d6da04082ae770693640dc11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424250, guid: 02fa0947d6da04082ae770693640dc11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424250, guid: 02fa0947d6da04082ae770693640dc11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424250, guid: 02fa0947d6da04082ae770693640dc11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424250, guid: 02fa0947d6da04082ae770693640dc11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424250, guid: 02fa0947d6da04082ae770693640dc11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 02fa0947d6da04082ae770693640dc11, type: 3}
+--- !u!4 &138155093 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 424250, guid: 02fa0947d6da04082ae770693640dc11, type: 3}
+  m_PrefabInstance: {fileID: 138155092}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &141506425
 GameObject:
   m_ObjectHideFlags: 0
@@ -30998,7 +31059,7 @@ PrefabInstance:
       objectReference: {fileID: 1549558761}
     - target: {fileID: -5455183261859018478, guid: 63d1a7792b05b4181a9a28f806143737, type: 3}
       propertyPath: musicFMODEventName
-      value: MX_LectureHall
+      value: event:/MX_LectureHall
       objectReference: {fileID: 0}
     - target: {fileID: -5455183261859018478, guid: 63d1a7792b05b4181a9a28f806143737, type: 3}
       propertyPath: midtermConversation
@@ -47383,6 +47444,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 138155093}
   - {fileID: 1507806233}
   m_Father: {fileID: 561909551}
   m_RootOrder: 20
@@ -56121,7 +56183,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1231348334}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1507806234
 MonoBehaviour:
@@ -75039,6 +75101,9 @@ MonoBehaviour:
   studyGameParent: {fileID: 1420167919112269932}
   gameStuff: {fileID: 1420167919828620722}
   finalScoreText: {fileID: 1420167920373219020}
+  timeLeft: 0
+  wrongGuessCount: 0
+  activeColumns: 
 --- !u!1 &1420167918350303646
 GameObject:
   m_ObjectHideFlags: 0

@@ -48,7 +48,6 @@ public class Location : MonoBehaviour
 
         // Save the updated list back to PlayerPrefsExtra
         PlayerPrefsExtra.SetList("messages", messages);
-        FMODAudioManager.Instance.StopMusic();
         SceneManager.LoadScene(scene);
 
     }
