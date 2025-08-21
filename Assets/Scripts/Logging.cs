@@ -13,6 +13,9 @@ public class Logging : MonoBehaviour
 
     private OGDLog m_Logger;
     public static Logging Instance { get; private set; }
+    
+    // Expose the logger for other systems to use
+    public OGDLog Logger => m_Logger;
 
 
     private void Awake()
